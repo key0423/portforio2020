@@ -1,0 +1,48 @@
+/*----------_p-home----------*/
+// 共通
+.p-home-heading{
+  color:$blue02;
+  @include margin-bottom2_3(60px);
+}
+
+.p-home-about{
+  @include padding-bottom2_3(80px);
+  &__img{
+    max-width:336px;
+    margin-right:2%;
+  }
+  &__txt{
+    flex-basis: calc(100%-336px);
+  }
+}
+.p-home-about-txt{
+  &__txt{
+    @include margin-bottom2_3(42px);
+  }
+}
+@include mq('sp') {
+  .p-home-about{
+    display: block;
+    overflow: hidden;
+    &__img{
+      max-width:300px;
+      margin-right:auto;
+      position: relative;
+      margin-bottom:40px;
+      z-index:1;
+      &::before{
+        position: absolute;
+        right: -2%;
+        display: inline-block;
+        max-width: 600px;
+        width:100%;
+        height: 0;
+        padding: 66%;
+        background:url(../img/home/home_img02.jpg) cover;
+      }
+    }
+    .c-link-btn{
+      margin: 0 auto;
+    }
+  }
+}

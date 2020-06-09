@@ -1,4 +1,5 @@
 /*----------_compornent----------*/
+// リンクボタン
 .c-link-btn{
   font-family:$font-btn;
   a{
@@ -8,3 +9,16 @@
     }
   }
 }
+
+// タイトル
+.c-heading-en{
+  font-size:64px;
+  letter-spacing: 0.1em;
+  line-height:1.0;
+}
+.c-heading--ja{
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height:1.4;
+}
+

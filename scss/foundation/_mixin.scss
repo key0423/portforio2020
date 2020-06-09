@@ -2,6 +2,10 @@ $basic_color:#333333;
 $basic_ff: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $font-btn: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $blue01:#829CAD;
+$blue02:#60A6D3;
+$sp:767px;
+$pc:1180px;
+
 
 
 // レイアウト幅
@@ -19,22 +23,58 @@ $breakpoints: (
   }
 }
 
-
+// リンクボタン
 @mixin c-link-btn($background:#fff,$font-color:#60A6D3){
   background: $background;
   color: $font-color;
-  .c-link-btn__arrow:after,
-  .c-link-btn__arrow:before{
-    background:$font-color;
+  .c-link-btn__arrow{
+    display: inline-block;
+    margin-left: 2em;
+    position: relative;
+    width: 40px;
+    &:after,
+    &:before{
+      display:inline-block;
+      content:'';
+      position:absolute;
+      background:$font-color;
+    }
+    &::before{
+      width:40px;
+      height:1px;
+      top:50%;
+      left:0;
+    }
+    &::after{
+      width:16px;
+      height:1px;
+      top:50%;
+      right:0;
+      translate:rotate(-15deg);
+    }
   }
 }
-
 @mixin c-link-btn-hover($background:#60A6D3,$font-color:#fff){
   background: $background;
   color: $font-color;
   box-shadow: 0 3px 8px #eeeeee;
-  .c-link-btn__arrow:after,
-  .c-link-btn__arrow:before{
+  .c-link-btn__arrow::after,
+  .c-link-btn__arrow::before{
     background:$font-color;
+  }
+}
+
+// margin-bottom調整
+@mixin margin-bottom2_3($margin-bottom){
+  margin-bottom:$margin-bottom;
+  @include mq('tab') {
+    margin-bottom:calc($margin-bottom * 2/3);
+  }
+}
+
+@mixin padding-bottom2_3($padding-bottom){
+  padding-bottom:$padding-bottom;
+  @include mq('tab') {
+    padding-bottom:calc($padding-bottom * 2/3);
   }
 }
