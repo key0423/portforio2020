@@ -1,6 +1,4 @@
-/*======================
-header
-======================*/
+/*----------_l-header----------*/
 .l-header{
   display: flex;
   align-items: center;
@@ -39,7 +37,6 @@ header
     }
   }
 }
-
 // スクロール後表示
 .l-header.show{
   background:rgba(255,255,255,0.6);
@@ -50,5 +47,3 @@ header
 .l-flex-box{
   display: flex;
 }
-
-
