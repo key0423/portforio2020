@@ -507,6 +507,11 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 /*=======================
 1179pxでPC非表示tab表示
 =======================*/
