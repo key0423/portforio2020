@@ -3,6 +3,12 @@
 .p-home-heading{
   color:$blue02;
   @include margin-bottom2_3(60px);
+  .--en{
+    font-size: 62px;
+  }
+  .--ja{
+    font-size: 20px;
+  }
 }
 
 .p-home-about{
