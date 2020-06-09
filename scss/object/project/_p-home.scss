@@ -3,7 +3,7 @@
 .p-home-heading{
   color:$blue02;
   @include margin-bottom2_3(60px);
-  &--en{
+  .c-heading--en{
     font-size: 62px;
     font-family:$font-en01;
   }
@@ -27,7 +27,7 @@
     a{
       border: solid 1px #333333;
       &:hover{
-        border: solid 1px #333333;
+        border: solid 1px #{$blue02};
       }      
     }
   }

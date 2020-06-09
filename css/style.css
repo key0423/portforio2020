@@ -714,6 +714,7 @@ object
 .c-heading--en {
   display: block;
   font-size: 64px;
+  font-family: "Crimson Text", serif;
   letter-spacing: 0.1em;
   line-height: 1.0;
 }
@@ -738,7 +739,7 @@ object
   }
 }
 
-.p-home-heading--en {
+.p-home-heading .c-heading--en {
   font-size: 62px;
   font-family: "Crimson Text", serif;
 }
@@ -776,7 +777,7 @@ object
 }
 
 .p-home-about .c-link-btn a:hover {
-  border: solid 1px #333333;
+  border: solid 1px #60A6D3;
 }
 
 .p-home-about-txt__txt {
