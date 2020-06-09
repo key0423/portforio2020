@@ -3,7 +3,7 @@
 .c-link-btn{
   font-family:$font-btn;
   a{
-    @include c-link-btn(($background:#fff,$font-color:#60A6D3));
+    @include c-link-btn($background:#fff,$font-color:#60A6D3);
     &:hover{
       @include c-link-btn-hover($background:#60A6D3,$font-color:#fff);
     }
@@ -11,12 +11,14 @@
 }
 
 // タイトル
-.c-heading-en{
+.c-heading--en{
+  display: block;
   font-size:64px;
   letter-spacing: 0.1em;
   line-height:1.0;
 }
 .c-heading--ja{
+  display: block;
   font-size: 20px;
   letter-spacing: 0.05em;
   line-height:1.4;

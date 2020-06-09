@@ -67,14 +67,14 @@ $breakpoints: (
 // margin-bottom調整
 @mixin margin-bottom2_3($margin-bottom){
   margin-bottom:$margin-bottom;
-  @include mq('tab') {
-    margin-bottom:calc($margin-bottom * 2/3);
+  @include mq('sp') {
+    margin-bottom:calc(#{$margin-bottom} * 2/3);
   }
 }
 
 @mixin padding-bottom2_3($padding-bottom){
   padding-bottom:$padding-bottom;
-  @include mq('tab') {
-    padding-bottom:calc($padding-bottom * 2/3);
+  @include mq('sp') {
+    padding-bottom:calc(#{$padding-bottom} * 2/3);
   }
 }
