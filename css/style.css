@@ -736,11 +736,11 @@ object
   }
 }
 
-.p-home-heading .--en {
+.p-home-heading--en {
   font-size: 62px;
 }
 
-.p-home-heading .--ja {
+.p-home-heading--ja {
   font-size: 20px;
 }
 
