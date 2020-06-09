@@ -1,0 +1,35 @@
+html{
+    height: 100%;
+}
+body{
+    color: $basic_color;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family:$basic_ff;
+    font-weight: 500;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    -webkit-font-feature-settings: 'palt' 1;
+    font-feature-settings: 'palt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff;
+    word-wrap: break-word;
+    vertical-align: baseline;
+    white-space: normal;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+  
+a {
+    color:$basic_color;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; 
+    &:hover {
+      text-decoration: none; 
+    }
+}
