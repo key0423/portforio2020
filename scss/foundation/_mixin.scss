@@ -1,6 +1,6 @@
 $basic_color:#333333;
 $basic_ff: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-
+$font-btn: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $blue01:#829CAD;
 
 
@@ -16,5 +16,25 @@ $breakpoints: (
 @mixin mq($breakpoint: sp) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
+  }
+}
+
+
+@mixin c-link-btn($background:#fff,$font-color:#60A6D3){
+  background: $background;
+  color: $font-color;
+  .c-link-btn__arrow:after,
+  .c-link-btn__arrow:before{
+    background:$font-color;
+  }
+}
+
+@mixin c-link-btn-hover($background:#60A6D3,$font-color:#fff){
+  background: $background;
+  color: $font-color;
+  box-shadow: 0 3px 8px #eeeeee;
+  .c-link-btn__arrow:after,
+  .c-link-btn__arrow:before{
+    background:$font-color;
   }
 }

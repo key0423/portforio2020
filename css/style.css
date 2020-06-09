@@ -468,6 +468,7 @@ template {
   display: none;
 }
 
+/*----------_common.scss----------*/
 html {
   height: 100%;
 }
@@ -506,12 +507,99 @@ a:hover {
   text-decoration: none;
 }
 
+/*=======================
+1179pxでPC非表示tab表示
+=======================*/
+@media screen and (max-width: 1179px) {
+  .--tab-none {
+    display: none;
+  }
+}
+
+.--tab-block {
+  display: none;
+}
+
+@media screen and (max-width: 1179px) {
+  .--tab-block {
+    display: block;
+  }
+}
+
+/*=======================
+767pxでPC非表示SP表示
+=======================*/
+@media screen and (max-width: 767px) {
+  .--pc-none {
+    display: none;
+  }
+}
+
+.--sp-none {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .--sp-none {
+    display: block;
+  }
+}
+
 /*==============================
 layout
 ==============================*/
-/*======================
-header
-======================*/
+/*----------_l-header----------*/
+.l-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: solid 1px #ccc;
+}
+
+.l-header-logo {
+  max-width: 180px;
+}
+
+.l-header-logo a {
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+
+.l-header-nav-menu {
+  margin-left: auto;
+  padding: 10px 25px;
+  font-size: 14px;
+}
+
+.l-header-nav__item--contact a,
+.l-header-nav__item--sns a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.l-header-nav__item--contact a:hover,
+.l-header-nav__item--sns a:hover {
+  background: #829CAD;
+  color: #fff;
+  border-left: none;
+  border-right: none;
+}
+
+.l-header.show {
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: solid 1px #eee;
+}
+
+.l-flex-box {
+  display: flex;
+}
+
+/*----------_l-header----------*/
 .l-header {
   display: flex;
   align-items: center;

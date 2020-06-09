@@ -1,0 +1,10 @@
+/*----------_compornent----------*/
+.c-link-btn{
+  font-family:$font-btn;
+  a{
+    @include c-link-btn(($background:#fff,$font-color:#60A6D3));
+    &:hover{
+      @include c-link-btn-hover($background:#60A6D3,$font-color:#fff);
+    }
+  }
+}
