@@ -58,13 +58,13 @@ img{
 767pxでPC非表示SP表示
 =======================*/
 .--pc-none{
-  @include mq('sp') {
-      display: none;
-  }
-}
-.--sp-none {
   display: none;
   @include mq('sp') {
       display: block;
+  }
+}
+.--sp-none {
+  @include mq('sp') {
+    display: none;
   }
 }

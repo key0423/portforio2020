@@ -1,6 +1,7 @@
 $basic_color:#333333;
 $basic_ff: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $font-btn: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$font-en01: 'Crimson Text', serif;
 $blue01:#829CAD;
 $blue02:#60A6D3;
 $sp:767px;
@@ -31,7 +32,7 @@ $breakpoints: (
     display: inline-block;
     margin-left: 2em;
     position: relative;
-    width: 40px;
+    width: 50px;
     &:after,
     &:before{
       display:inline-block;
@@ -40,7 +41,7 @@ $breakpoints: (
       background:$font-color;
     }
     &::before{
-      width:40px;
+      width:50px;
       height:1px;
       top:50%;
       left:0;
@@ -48,9 +49,9 @@ $breakpoints: (
     &::after{
       width:16px;
       height:1px;
-      top:50%;
+      top:-16px;
       right:0;
-      translate:rotate(-15deg);
+      transform:rotate(45deg);
     }
   }
 }

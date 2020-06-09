@@ -12,6 +12,7 @@
 }
 
 .p-home-about{
+  display: flex;
   @include padding-bottom2_3(80px);
   &__img{
     max-width:336px;
@@ -21,8 +22,13 @@
     flex-basis: calc(100%-336px);
   }
   .c-link-btn{
-    border: solid 1px #333333;
     margin: 0 auto;
+    a{
+      border: solid 1px #333333;
+      &:hover{
+        border: solid 1px #333333;
+      }      
+    }
   }
 }
 .p-home-about-txt{

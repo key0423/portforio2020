@@ -534,19 +534,19 @@ img {
 /*=======================
 767pxでPC非表示SP表示
 =======================*/
-@media screen and (max-width: 767px) {
-  .--pc-none {
-    display: none;
-  }
-}
-
-.--sp-none {
+.--pc-none {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .--sp-none {
+  .--pc-none {
     display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--sp-none {
+    display: none;
   }
 }
 
@@ -665,6 +665,8 @@ object
 }
 
 .c-link-btn a {
+  display: block;
+  padding: 1em 2em;
   background: #fff;
   color: #60A6D3;
 }
@@ -673,7 +675,7 @@ object
   display: inline-block;
   margin-left: 2em;
   position: relative;
-  width: 40px;
+  width: 50px;
 }
 
 .c-link-btn a .c-link-btn__arrow:after, .c-link-btn a .c-link-btn__arrow:before {
@@ -684,7 +686,7 @@ object
 }
 
 .c-link-btn a .c-link-btn__arrow::before {
-  width: 40px;
+  width: 50px;
   height: 1px;
   top: 50%;
   left: 0;
@@ -693,9 +695,9 @@ object
 .c-link-btn a .c-link-btn__arrow::after {
   width: 16px;
   height: 1px;
-  top: 50%;
+  top: -16px;
   right: 0;
-  translate: rotate(-15deg);
+  transform: rotate(45deg);
 }
 
 .c-link-btn a:hover {
@@ -745,6 +747,7 @@ object
 }
 
 .p-home-about {
+  display: flex;
   padding-bottom: 80px;
 }
 

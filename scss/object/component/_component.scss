@@ -3,6 +3,8 @@
 .c-link-btn{
   font-family:$font-btn;
   a{
+    display: block;
+    padding:1em 2em;
     @include c-link-btn($background:#fff,$font-color:#60A6D3);
     &:hover{
       @include c-link-btn-hover($background:#60A6D3,$font-color:#fff);
