@@ -127,12 +127,26 @@
   } 
 }
 
+// タイトル部分
+.p-home-methods-ttl{
+  .p-home-heading{
+    width: 100%;
+    .c-heading--en{
+      color: #fefefe;
+    }
+  }
+  .c-heading--ja{
+    width: 100%;
+    line-height: 2.0;
+  }
+}
+
 // leftテキストblc
 .p-home-methods-ttl{
   position: relative;
   z-index: 2;
   color: #fefefe;
-  max-width: 410px;
+  max-width: 540px;
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -152,7 +166,11 @@
 }
 
 
-
+.p-home-skill-list{
+  width: 100%;
+  max-width: 540px;
+  padding: 0 2%;
+}
 // Skillリストflex
 .p-home-skill-list__item{
   display: flex;
