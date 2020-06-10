@@ -586,9 +586,13 @@ layout
   display: block;
 }
 
+.l-header-nav {
+  display: inline-block;
+  margin-left: auto;
+}
+
 .l-header-nav-menu {
   align-items: center;
-  margin-left: auto;
   padding: 10px 0;
 }
 
