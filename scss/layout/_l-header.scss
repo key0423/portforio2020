@@ -13,13 +13,19 @@
     }
   }
   &-nav{
-    &-menu{
-      margin-left: auto;
-      padding:10px 25px;
-      font-size: 14px;
-    }
   }
 }
+
+.l-header-nav-menu{
+  align-items: center;
+  margin-left: auto;
+  padding:10px 0;
+    &_item{
+    font-size: 14px;
+    padding:0 8px;
+  }
+}
+
 .l-header-nav__item--contact,
 .l-header-nav__item--sns{
   a{

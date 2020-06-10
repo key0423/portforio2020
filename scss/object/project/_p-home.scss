@@ -21,8 +21,10 @@
   }
   &__txt{
     flex-basis: calc(100%-336px);
+    line-height: 2.0;
   }
   .c-link-btn{
+    max-width: 250px;
     margin: 0 auto;
     a{
       border: solid 1px #333333;

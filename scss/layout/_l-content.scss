@@ -1,0 +1,15 @@
+/*----------_l-cntent----------*/
+.l-container-lg{
+  max-width:$pc;
+  padding:0 2%;
+}
+// 
+.l-header.show{
+  background:rgba(255,255,255,0.6);
+  border-bottom: solid 1px #eee;
+}
+
+// flex
+.l-flex-box{
+  display: flex;
+}

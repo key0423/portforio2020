@@ -553,6 +553,21 @@ img {
 /*==============================
 layout
 ==============================*/
+/*----------_l-cntent----------*/
+.l-container-lg {
+  max-width: 1180px;
+  padding: 0 2%;
+}
+
+.l-header.show {
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: solid 1px #eee;
+}
+
+.l-flex-box {
+  display: flex;
+}
+
 /*----------_l-header----------*/
 .l-header {
   display: flex;
@@ -572,9 +587,14 @@ layout
 }
 
 .l-header-nav-menu {
+  align-items: center;
   margin-left: auto;
-  padding: 10px 25px;
+  padding: 10px 0;
+}
+
+.l-header-nav-menu_item {
   font-size: 14px;
+  padding: 0 8px;
 }
 
 .l-header-nav__item--contact a,
@@ -669,6 +689,7 @@ object
   padding: 1em 2em;
   background: #fff;
   color: #60A6D3;
+  letter-spacing: 0.1em;
 }
 
 .c-link-btn a .c-link-btn__arrow {
@@ -688,14 +709,14 @@ object
 .c-link-btn a .c-link-btn__arrow::before {
   width: 50px;
   height: 1px;
-  top: 50%;
+  top: -8px;
   left: 0;
 }
 
 .c-link-btn a .c-link-btn__arrow::after {
   width: 16px;
   height: 1px;
-  top: -16px;
+  top: -7px;
   right: 0;
   transform: rotate(45deg);
 }
@@ -766,9 +787,11 @@ object
 
 .p-home-about__txt {
   flex-basis: calc(100%-336px);
+  line-height: 2.0;
 }
 
 .p-home-about .c-link-btn {
+  max-width: 250px;
   margin: 0 auto;
 }
 
