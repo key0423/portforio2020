@@ -110,6 +110,8 @@
     } 
     &__left{
       background:none;
+      display: flex;
+      align-items: center;
       &::after{
         display:inline-block;
         content:'';
@@ -135,7 +137,7 @@
       color: #fefefe;
     }
   }
-  .c-heading--ja{
+  .p-home-methods-ttl__txt{
     width: 100%;
     line-height: 2.0;
   }
@@ -147,10 +149,8 @@
   z-index: 2;
   color: #fefefe;
   max-width: 540px;
+  padding-right: 2%;
   margin-left: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 @include mq('sp') {
   .p-home-methods-ttl{
@@ -179,11 +179,12 @@
     border-bottom: solid 1px #707070;
   } 
   .p-home-skill__icon{
-    margin-right: 1%;
+    margin-right: 2%;
     flex-basis:22%;
   }
   .p-home-skill__txt{
     flex-basis:77%;
+    line-height: 1.8;
   }
 }
 @include mq('sp') {
@@ -207,8 +208,8 @@
 // Skillアイコン
 .p-home-skill-icon{
   &__img{
-    max-width: 70px;
-    margin: 0 auto 10px;
+    max-width: 56px;
+    margin: 0 auto 4px;
   }
   &__txt{
     text-align: center;

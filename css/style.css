@@ -899,6 +899,8 @@ object
   }
   .p-home-methods__left {
     background: none;
+    display: flex;
+    align-items: center;
   }
   .p-home-methods__left::after {
     display: inline-block;
@@ -923,7 +925,7 @@ object
   color: #fefefe;
 }
 
-.p-home-methods-ttl .c-heading--ja {
+.p-home-methods-ttl .p-home-methods-ttl__txt {
   width: 100%;
   line-height: 2.0;
 }
@@ -933,10 +935,8 @@ object
   z-index: 2;
   color: #fefefe;
   max-width: 540px;
+  padding-right: 2%;
   margin-left: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {
@@ -968,12 +968,13 @@ object
 }
 
 .p-home-skill-list__item .p-home-skill__icon {
-  margin-right: 1%;
+  margin-right: 2%;
   flex-basis: 22%;
 }
 
 .p-home-skill-list__item .p-home-skill__txt {
   flex-basis: 77%;
+  line-height: 1.8;
 }
 
 @media screen and (max-width: 767px) {
@@ -995,8 +996,8 @@ object
 }
 
 .p-home-skill-icon__img {
-  max-width: 70px;
-  margin: 0 auto 10px;
+  max-width: 56px;
+  margin: 0 auto 4px;
 }
 
 .p-home-skill-icon__txt {
