@@ -24,7 +24,9 @@ body{
   overflow-x: hidden;
   overflow-y: scroll;
 }
-  
+@include mq('sp') {
+  font-size: 12px;
+} 
 a {
   color:$basic_color;
   -webkit-transition: opacity 0.3s ease;

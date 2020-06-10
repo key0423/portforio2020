@@ -1,7 +1,11 @@
 /*----------_l-header----------*/
 .l-header{
+  position: sticky;
+  position: -webkit-sticky;/*Safari*/
+  top: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   border-bottom: solid 1px #ccc;
   &-logo{
@@ -20,10 +24,13 @@
 
 .l-header-nav-menu{
   align-items: center;
-  padding:10px 0;
     &__item{
     font-size: 14px;
-    padding:0 8px;
+    padding:0 12px;
+    letter-spacing: 0.05em;
+    a:hover{
+
+    }
   }
 }
 
