@@ -1,0 +1,14 @@
+/*----------_l-bottom-bnr----------*/
+.l-bottom-bnr{
+  .l-bottom-bnr-flex{
+    display: flex;
+  }
+}
+.l-bottom-bnr-item{
+  a{
+    display: block;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+}

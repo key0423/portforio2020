@@ -3,6 +3,7 @@ $basic_ff: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシッ
 $font-btn: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $font-en01: 'Crimson Text', serif;
 $font-en02: 'Damion', cursive;
+$font-en03: 'Caveat', cursive;
 $blue01:#829CAD;
 $blue02:#60A6D3;
 $sp:767px;
@@ -14,6 +15,7 @@ $pc:1180px;
 $layout-width-inner: 1180px;
 // ブレークポイント
 $breakpoints: (
+  "sp-s": "screen and (max-width: 400px)",  
   "sp": "screen and (max-width: 767px)",
   "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
   "pc": "screen and (min-width: #{$layout-width-inner})",
@@ -45,7 +47,7 @@ $breakpoints: (
     &::before{
       width:50px;
       height:1px;
-      top:-8px;
+      top:-2px;
       left:0;
     }
     &::after{
