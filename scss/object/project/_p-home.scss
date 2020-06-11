@@ -69,20 +69,25 @@
 
 /*==========catch==========*/
 .l-home-catch{
-  .p-home-contact{
-    @include padding-top2_3(80px);
-    @include padding-bottom2_3(80px);
-    background: url(../img/home/home_img02.png) no-repeat;
+  .p-home-catch-bg{
+    background: #000;
+    .p-home-catch{
+      position: relative;
+      @include padding-top2_3(80px);
+      @include padding-bottom2_3(80px);
+      background: url(../img/home/home_img02.png) no-repeat right 100px bottom;
+    }
   }
-  .p-home-copy_txt01{
+  .p-home-copy__txt01{
     font-family: $font-en03;
-    font-size:64px; 
-    transform: rotate(32deg);
+    font-size:64px;
+    color: $blue02;
+    transform: rotate(-32deg);
     position: absolute;
     left: calc(50% - 400px);
     top: 100px;
   }
-  .p-home-copy_txt02{
+  .p-home-copy__txt02{
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.2em;
@@ -90,7 +95,7 @@
 }
 @include mq('sp-s') {
 .l-home-catch{
-  .p-home-copy_txt02{
+  .p-home-copy__txt02{
     font-size: 16px;
   }
 }
@@ -233,7 +238,7 @@
       flex-basis:74%;
       color: #fefefe;
     }
-  } 
+  }   
 }
 
 // Skillアイコン

@@ -52,22 +52,28 @@
 <!-- slider -->
  <div class="l-home-visual">
    <h2 class="p-home-name">Keiko <br> Kobayashi</h2>
-  <div class="p-home-visual__list swiper-slider">
-   <div class="swiper-slide"><img src="http://placekitten.com/1200/800"></div>
-   <div class="swiper-slide"><img src="http://placekitten.com/800/1200"></div>
-   <div class="swiper-slide"><img src="http://placekitten.com/1600/800"></div>
-  </div>
+   <div class="swiper-container">
+    <div class="p-home-visual__list swiper-wrapper">
+      <div class="swiper-slide"><img src="http://placekitten.com/1200/800"></div>
+      <div class="swiper-slide"><img src="http://placekitten.com/800/1200"></div>
+      <div class="swiper-slide"><img src="http://placekitten.com/1600/800"></div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div><!-- /.swiper-container -->
   <div class="p-home-scroll_area">
    <div class="p-home-scroll-btn">Scroll</div>
   </div>
  </div>
 
 <div class="l-home-catch">
-  <div class="p-home-catch l-container-lg">
-   <p class="p-home-copy_txt01">Web Design</p>
-   <p class="p-home-copy_txt02">Webサイトはギフトと同じ。<br>
-     ターゲットや目的に合わせた制作を行い、<br>
-     お客様の価値をあげるお手伝いをします。</p>
+  <div class="p-home-catch-bg">
+    <div class="p-home-catch l-container-lg">
+     <p class="p-home-copy__txt01">Web Design</p>
+     <p class="p-home-copy__txt02">Webサイトはギフトと同じ。<br>
+       ターゲットや目的に合わせた制作を行い、<br>
+       お客様の価値をあげるお手伝いをします。</p>
+    </div>
   </div>
 </div>
 
@@ -194,8 +200,18 @@
 
 <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <!-- //スライダーswiper-js -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-<script src="swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script>
+    let mySwiper = new Swiper ('.swiper-container', {
+      // オプションの設定
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // ・・・必要なだけオプションを指定・・・
+    });
+    </script>
+<!-- header出現 -->
 <script>
 $(function(){
   $(window).on('scroll',function(){
