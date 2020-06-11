@@ -770,6 +770,7 @@ object
 }
 
 .p-home-visual-txt .p-home-name {
+  font-family: "Crimson Text", serif;
   position: absolute;
   top: 50%;
   left: 2%;

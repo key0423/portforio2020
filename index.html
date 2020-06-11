@@ -52,7 +52,7 @@
 <!-- slider -->
  <div class="p-home-visual">
    <div class="p-home-visual-txt l-container-lg">
-     <h2 class="p-home-name">Keiko<br>Kobayashi<span class="p-home-name--small">web designer</span></h2>
+     <h2 class="p-home-name">Keiko<br>Kobayashi<br><span class="p-home-name--small">web designer</span></h2>
    </div>
    <div class="swiper-container-main">
     <div class="p-home-visual__list swiper-wrapper">
@@ -210,7 +210,13 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      // ・・・必要なだけオプションを指定・・・
+      autoplay: {
+        delay: 8000,
+      },
+      speed: {
+        number: 8000,
+      },
+      loop: true,
     });
     </script>
 <!-- header出現 -->
