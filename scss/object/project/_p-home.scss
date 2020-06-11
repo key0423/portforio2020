@@ -11,7 +11,41 @@
     font-size: 20px;
   }
 }
+/*========== home-visual ==========*/
+.p-home-visual{
+  .p-home-visual-txt{
+    position: relative;
+    height: 100%;
+    z-index: 400;
+    .p-home-name{
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      font-size: 72px;
+      letter-spacing: 0.2em;
+      color: #fefefe;
+      &--small{
+        font-size: 14px;
+        color: #fefefe;
+      }
+    }
+  }
+  .swiper-container-main{
+    position: relative;
+    &::before{
+      display:inline-block;
+      content:'';
+      width: 100%;
+      height: 100%;
+      position:absolute;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.8);
+    }
+  }
+}
 
+/*========== about ==========*/
 .p-home-about{
   display: flex;
   @include padding-bottom2_3(80px);
@@ -48,7 +82,7 @@
       margin-right:auto;
       position: relative;
       margin-bottom:40px;
-      z-index:1;
+      z-index:100;
       &::before{
         position: absolute;
         right: -2%;
@@ -132,7 +166,7 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
-    z-index: 2;
+    z-index: 200;
     &::after{
       display:inline-block;
       content:'';
@@ -182,7 +216,7 @@
 // leftテキストblc
 .p-home-methods-ttl{
   position: relative;
-  z-index: 2;
+  z-index: 300;
   color: #fefefe;
   max-width: 540px;
   padding-right: 2%;
