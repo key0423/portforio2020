@@ -26,7 +26,7 @@ $breakpoints: (
 }
 
 // リンクボタン
-@mixin c-link-btn($background:#fff,$font-color:#60A6D3){
+@mixin c-link-btn($background:#fff,$font-color:#bbbbbb){
   background: $background;
   color: $font-color;
   letter-spacing: 0.1em;
@@ -60,7 +60,7 @@ $breakpoints: (
 @mixin c-link-btn-hover($background:#60A6D3,$font-color:#fff){
   background: $background;
   color: $font-color;
-  box-shadow: 0 3px 8px #eeeeee;
+  box-shadow: 0 3px 8px #cccccc;
   .c-link-btn__arrow::after,
   .c-link-btn__arrow::before{
     background:$font-color;

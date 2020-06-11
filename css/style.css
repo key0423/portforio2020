@@ -740,7 +740,7 @@ object
 .c-link-btn a:hover {
   background: #60A6D3;
   color: #fff;
-  box-shadow: 0 3px 8px #eeeeee;
+  box-shadow: 0 3px 8px #cccccc;
 }
 
 .c-link-btn a:hover .c-link-btn__arrow::after,
@@ -758,8 +758,7 @@ object
 
 .c-heading--ja {
   display: block;
-  font-size: 20px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   line-height: 1.4;
 }
 
@@ -807,7 +806,7 @@ object
 }
 
 .p-home-about .c-link-btn {
-  max-width: 250px;
+  max-width: 240px;
   margin: 0 auto;
 }
 
@@ -1053,8 +1052,14 @@ object
 .p-home-contact__txt {
   text-align: center;
   margin: 42px 1%;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+
+.p-home-contact .c-link-btn {
+  max-width: 240px;
+  margin: 0 auto;
 }
 
 /*----------utility----------*/
