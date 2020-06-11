@@ -1024,4 +1024,37 @@ object
   }
 }
 
+.p-home-contact--bg {
+  background: url(../img/home/home_img05.jpg);
+  background-size: cover;
+}
+
+.p-home-contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-contact {
+    padding-top: calc(80px * 2/3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-contact {
+    padding-bottom: calc(80px * 2/3);
+  }
+}
+
+.p-home-contact .p-home-heading {
+  text-align: center;
+}
+
+.p-home-contact__txt {
+  text-align: center;
+  margin: 42px 1%;
+  font-size: 22px;
+  line-height: 1.8;
+}
+
 /*----------utility----------*/

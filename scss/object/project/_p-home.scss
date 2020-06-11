@@ -232,3 +232,21 @@
     }
   } 
 }
+
+.p-home-contact--bg{
+  background:url(../img/home/home_img05.jpg);
+  background-size: cover;
+}
+.p-home-contact{
+  @include padding-top2_3(80px);
+  @include padding-bottom2_3(80px);
+  .p-home-heading{
+    text-align: center;
+  }
+  &__txt{
+    text-align: center;
+    margin:42px 1%;
+    font-size: 22px;
+    line-height: 1.8;
+  }
+}

@@ -75,9 +75,17 @@ $breakpoints: (
   }
 }
 
+@mixin padding-top2_3($padding-top){
+  padding-top:$padding-top;
+  @include mq('sp') {
+    padding-top:calc(#{$padding-top} * 2/3);
+  }
+}
+
 @mixin padding-bottom2_3($padding-bottom){
   padding-bottom:$padding-bottom;
   @include mq('sp') {
     padding-bottom:calc(#{$padding-bottom} * 2/3);
   }
 }
+
