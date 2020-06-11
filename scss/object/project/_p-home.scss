@@ -24,9 +24,11 @@
       left: 2%;
       font-size: 72px;
       letter-spacing: 0.2em;
+      line-height: 1.1;
       color: #fefefe;
       &--small{
         font-size: 14px;
+        letter-spacing: 0.1em;
         color: #fefefe;
       }
     }
@@ -104,27 +106,29 @@
 
 /*==========catch==========*/
 .l-home-catch{
+  @include margin-bottom2_3(80px);
   .p-home-catch-bg{
     background: #EDEDED;
     .p-home-catch{
       position: relative;
-      @include padding-top2_3(80px);
-      @include padding-bottom2_3(80px);
-      background: url(../img/home/home_img02.png) no-repeat right 100px bottom;
+      @include padding-top2_3(120px);
+      @include padding-bottom2_3(120px);
+      background:url(../img/home/home_img02.png) no-repeat right 20% bottom 40%;
     }
   }
   .p-home-copy__txt01{
     font-family: $font-en03;
     font-size:64px;
     color: $blue02;
-    transform: rotate(-32deg);
+    transform: rotate(-25deg);
     position: absolute;
-    left: calc(50% - 400px);
-    top: 100px;
+    left: calc(50% - 340px);
+    top: 60px;
   }
   .p-home-copy__txt02{
     text-align: center;
     font-size: 18px;
+    line-height: 2.2;
     letter-spacing: 0.2em;
   }
 }

@@ -776,11 +776,13 @@ object
   left: 2%;
   font-size: 72px;
   letter-spacing: 0.2em;
+  line-height: 1.1;
   color: #fefefe;
 }
 
 .p-home-visual-txt .p-home-name--small {
   font-size: 14px;
+  letter-spacing: 0.1em;
   color: #fefefe;
 }
 
@@ -873,26 +875,36 @@ object
 }
 
 /*==========catch==========*/
+.l-home-catch {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-home-catch {
+    margin-bottom: calc(80px * 2/3);
+  }
+}
+
 .l-home-catch .p-home-catch-bg {
   background: #EDEDED;
 }
 
 .l-home-catch .p-home-catch-bg .p-home-catch {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background: url(../img/home/home_img02.png) no-repeat right 100px bottom;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url(../img/home/home_img02.png) no-repeat right 20% bottom 40%;
 }
 
 @media screen and (max-width: 767px) {
   .l-home-catch .p-home-catch-bg .p-home-catch {
-    padding-top: calc(80px * 2/3);
+    padding-top: calc(120px * 2/3);
   }
 }
 
 @media screen and (max-width: 767px) {
   .l-home-catch .p-home-catch-bg .p-home-catch {
-    padding-bottom: calc(80px * 2/3);
+    padding-bottom: calc(120px * 2/3);
   }
 }
 
@@ -900,15 +912,16 @@ object
   font-family: "Caveat", cursive;
   font-size: 64px;
   color: #60A6D3;
-  transform: rotate(-32deg);
+  transform: rotate(-25deg);
   position: absolute;
-  left: calc(50% - 400px);
-  top: 100px;
+  left: calc(50% - 340px);
+  top: 60px;
 }
 
 .l-home-catch .p-home-copy__txt02 {
   text-align: center;
   font-size: 18px;
+  line-height: 2.2;
   letter-spacing: 0.2em;
 }
 
