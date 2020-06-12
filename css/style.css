@@ -803,6 +803,18 @@ object
   background: rgba(0, 0, 0, 0.8);
 }
 
+.p-home-visual .swiper-slide {
+  width: 100vw;
+  height: 78vh;
+}
+
+.p-home-visual .swiper-slide > img {
+  object-fit: cover;
+  /* IE: not support */
+  width: 100%;
+  height: 100%;
+}
+
 /*========== about ==========*/
 .p-home-about {
   display: flex;
