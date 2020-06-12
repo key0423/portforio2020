@@ -781,9 +781,11 @@ object
 }
 
 .p-home-visual-txt .p-home-name--small {
-  font-size: 14px;
+  display: block;
+  font-size: 24px;
   letter-spacing: 0.1em;
   color: #fefefe;
+  margin-top: 10px;
 }
 
 .p-home-visual .swiper-container-main {
