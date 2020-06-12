@@ -562,6 +562,20 @@ layout
 /*----------_l-bottom-bnr----------*/
 .l-bottom-bnr .l-bottom-bnr-flex {
   display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-bottom-bnr .l-bottom-bnr-flex {
+    padding-top: calc(80px * 2/3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .l-bottom-bnr .l-bottom-bnr-flex {
+    padding-bottom: calc(80px * 2/3);
+  }
 }
 
 .l-bottom-bnr-item a {
@@ -596,6 +610,7 @@ layout
 }
 
 .l-footer .l-footer-copyriht {
+  text-align: center;
   font-size: 12px;
   color: #ffffff;
 }
@@ -763,10 +778,13 @@ object
 }
 
 /*========== home-visual ==========*/
-.p-home-visual-txt {
+.p-home-visual {
   position: relative;
-  height: 100%;
-  z-index: 400;
+}
+
+.p-home-visual-txt {
+  height: 80vh;
+  z-index: 500;
 }
 
 .p-home-visual-txt .p-home-name {
@@ -778,14 +796,12 @@ object
   letter-spacing: 0.2em;
   line-height: 1.1;
   color: #fefefe;
-}
-
-.p-home-visual-txt .p-home-name--small {
-  display: block;
-  font-size: 24px;
-  letter-spacing: 0.1em;
-  color: #fefefe;
-  margin-top: 10px;
+  transform: translate(0, -50%) .p-home-visual-txt .p-home-name --small;
+  transform-display: block;
+  transform-font-size: 24px;
+  transform-letter-spacing: 0.1em;
+  transform-color: #fefefe;
+  transform-margin-top: 10px;
 }
 
 .p-home-visual .swiper-container-main {
@@ -796,11 +812,17 @@ object
   display: inline-block;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 80vh;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(63, 87, 103, 0.7);
+  z-index: 400;
+}
+
+.p-home-visual .swiper-container-main .swiper-button-prev,
+.p-home-visual .swiper-container-main .swiper-button-next {
+  display: none;
 }
 
 .p-home-visual .swiper-slide {
@@ -1154,10 +1176,13 @@ object
 .p-home-contact .c-link-btn {
   max-width: 240px;
   margin: 0 auto;
+}
+
+.p-home-contact .c-link-btn a {
   border: solid 1px #ccc;
 }
 
-.p-home-contact .c-link-btn a:hover {
+.p-home-contact .c-link-btn a a:hover {
   border: solid 1px #60A6D3;
 }
 

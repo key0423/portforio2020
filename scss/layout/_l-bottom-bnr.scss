@@ -2,6 +2,8 @@
 .l-bottom-bnr{
   .l-bottom-bnr-flex{
     display: flex;
+    @include padding-top2_3(80px);
+    @include padding-bottom2_3(80px);    
   }
 }
 .l-bottom-bnr-item{

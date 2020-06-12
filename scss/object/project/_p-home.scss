@@ -345,9 +345,11 @@
   .c-link-btn{
     max-width: 240px;
     margin: 0 auto;
-    border: solid 1px #ccc;
-    a:hover{
-      border: solid 1px #60A6D3;
+    a{
+      border: solid 1px #ccc;
+      a:hover{
+        border: solid 1px #60A6D3;
+      }
     }
   }
 }
