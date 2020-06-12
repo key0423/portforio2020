@@ -782,16 +782,12 @@ object
   position: relative;
 }
 
-.p-home-visual-txt {
-  height: 78vh;
-  z-index: 500;
-}
-
 .p-home-visual-txt .p-home-name {
   font-family: "Crimson Text", serif;
   position: absolute;
   top: 50%;
-  left: 2%;
+  left: calc(50% - 540px);
+  z-index: 500;
   font-size: 72px;
   letter-spacing: 0.2em;
   line-height: 1.1;
@@ -818,7 +814,7 @@ object
 
 .p-home-visual .swiper-slide {
   width: 100vw;
-  height: 78vh;
+  height: 86vh;
   position: relative;
 }
 
@@ -826,7 +822,7 @@ object
   display: inline-block;
   content: '';
   width: 100%;
-  height: 78vh;
+  height: 86vh;
   position: absolute;
   top: 0;
   left: 0;
