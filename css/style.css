@@ -954,27 +954,6 @@ object
   text-align: left;
 }
 
-.p-home-works-swiper .swiper-slide-active .s-four-text {
-  animation: slideFromRight 1.5s ease 0s 1 normal;
-}
-
-.p-home-works-swiper .swiper-slide-active .s-four-sub {
-  animation: slideFromRightSub 2.0s ease 0s 1 normal;
-}
-
-.p-home-works-swiper .swiper-slide-active .s-four-box {
-  animation: slideFromRightBox 2.5s ease 0s 1 normal;
-}
-
-@keyframes slideFromRightBox {
-  0%, 65% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 /*==========catch==========*/
 .l-home-catch {
   margin-bottom: 80px;
