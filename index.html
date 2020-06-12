@@ -261,7 +261,13 @@
 <script>
 // window.addEventListener('DOMContentLoaded', function() {
   var swiper = new Swiper('.p-home-works-swiper', {
-    pagination: '.swiper-pagination',
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
     paginationClickable: true,
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
@@ -272,7 +278,7 @@
     effect: 'coverflow'
   });
 // }, false);
-  </script>
+</script>
 
 <!-- header出現 -->
 <script>
