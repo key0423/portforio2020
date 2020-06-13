@@ -965,9 +965,11 @@ object
   width: 35%;
   flex-basis: 35%;
   height: 100%;
+  bottom: 0;
 }
 
 .p-home-works-swiper .swiper-container {
+  overflow: visible;
   padding: 30px 0 50px;
 }
 
@@ -976,7 +978,12 @@ object
   background: #ffffff;
 }
 
+.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img {
+  max-width: 640px;
+}
+
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__link {
+  width: 100%;
   display: block;
   overflow: hidden;
 }
@@ -1029,6 +1036,7 @@ object
   border-radius: inherit;
   color: #333333;
   background: none;
+  position: relative;
 }
 
 .p-home-works-swiper .swiper-pagination-bullet:before {
@@ -1038,26 +1046,41 @@ object
   height: 1px;
   background: #333333;
   position: absolute;
-  top: 50%;
-  right: -20px;
+  top: 10px;
+  right: -50px;
   transition: .3s;
 }
 
-.p-home-works-swiper .swiper-pagination-bullet:before {
+.p-home-works-swiper .swiper-pagination-bullet:after {
   display: inline-block;
   content: '';
-  width: 100px;
-  height: 1px;
+  width: 18px;
+  height: 18px;
   border: solid 1px #333333;
   position: absolute;
   top: 50%;
-  right: -20px;
+  right: 0;
   transition: .3s;
+  border-radius: 50%;
 }
 
 .p-home-works-swiper .swiper-pagination-bullet-active {
   font-size: 16px;
   font-weight: bold;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px;
+}
+
+.swiper-button-next:after {
+  top: -20px;
+}
+
+.swiper-button-prev:after {
+  top: -20px;
+  right: 2%;
 }
 
 .p-home-works .c-link-btn {

@@ -163,17 +163,21 @@
     width: 35%;
     flex-basis: 35%;
     height: 100%;
+    bottom: 0;
   }
 }
 .p-home-works-swiper{
   .swiper-container {
+    overflow: visible;
     padding: 30px 0 50px;
   }
   .swiper-slide__wrap {
     position: relative;
     background: #ffffff;
     .swiper-slide-img{
+      max-width: 640px;
       &__link{
+        width: 100%;
         display: block;
         overflow: hidden;
         &:hover{
@@ -221,6 +225,7 @@
     border-radius: inherit;
     color: #333333;
     background: none;
+    position: relative;
     &:before{
       display:inline-block;
       content:'';
@@ -228,20 +233,21 @@
       height:1px;
       background: #333333;
       position:absolute;
-      top:50%;
-      right:-20px;
+      top:10px;
+      right:-50px;
       transition: .3s;
     }
-    &:before{
+    &:after{
       display:inline-block;
       content:'';
-      width:100px;
-      height:1px;
+      width:18px;
+      height:18px;
       border: solid 1px #333333;
       position:absolute;
       top:50%;
-      right:-20px;
+      right:0;
       transition: .3s;
+      border-radius: 50%;
     }
   }
   .swiper-pagination-bullet-active {
@@ -249,6 +255,22 @@
     font-weight: bold;
   }
 }
+
+// 前後ボタン
+.swiper-button-next:after,
+.swiper-button-prev:after{
+  font-size: 18px;
+}
+.swiper-button-next:after{
+  top: -20px;
+}
+.swiper-button-prev:after{
+  top: -20px;
+  right: 2%;
+}
+
+
+// ボタン
 .p-home-works{
   .c-link-btn{
     max-width: 240px;
