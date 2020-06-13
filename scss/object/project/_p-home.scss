@@ -149,6 +149,7 @@
 .p-home-works-swiper{
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   .swiper-wrapper{
     flex-basis: 50%;
   }

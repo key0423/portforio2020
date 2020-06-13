@@ -943,6 +943,7 @@ object
 .p-home-works-swiper {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 .p-home-works-swiper .swiper-wrapper {
