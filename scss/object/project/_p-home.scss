@@ -171,6 +171,7 @@
   }
   .swiper-slide__wrap {
     position: relative;
+    background: #ffffff;
     .swiper-slide-img{
       &__link{
         display: block;
@@ -186,16 +187,13 @@
       }
     }
     .swiper-slide-box {
-      position: absolute;
+      max-width: 580px;
       width: 100%;
-      left: 0;
-      bottom: 40px;
       color: #fff;
       background: #B5C1C4;
       text-align: left;
-      z-index: 500;
       padding: 30px;
-      transform: translateY(100%);    
+      transform: translateY(-40px);    
       &__cat{
         display: block;
         font-size: 12px;
