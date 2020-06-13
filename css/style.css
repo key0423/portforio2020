@@ -980,9 +980,13 @@ object
   overflow: hidden;
 }
 
+.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__link:hover {
+  opacity: 0.6;
+}
+
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__link img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
