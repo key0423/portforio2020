@@ -1021,6 +1021,7 @@ object
   padding: 10px 0;
   letter-spacing: 0.1em;
   border-bottom: solid 2px #fff;
+  height: 30px;
 }
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-box__txt {
