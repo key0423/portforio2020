@@ -169,12 +169,13 @@
     .swiper-slide-img{
       &__img{
         display: block;
-      img{
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
+        overflow: hidden;
+        img{
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+        }
       }
-    }
     }
     .swiper-slide-box {
       position: absolute;

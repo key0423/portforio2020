@@ -967,6 +967,7 @@ object
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__img {
   display: block;
+  overflow: hidden;
 }
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__img img {
