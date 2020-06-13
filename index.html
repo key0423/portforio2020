@@ -272,7 +272,6 @@
           return '<span class="' + className + '">' + "テキスト" + '</span>';
         },
       },
-    slidesPerView: 1,
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
     loop: true, //ループさせる
@@ -280,7 +279,8 @@
      effect: "fade", //フェードのエフェクト
      autoplay: {
      delay: 3000, //４秒後に次の画像へ
-     disableOnInteraction: true, //ユーザー操作後に自動再生を再開する
+     disableOnInteraction: false, //ユーザー操作後に自動再生を再開する
+     reverseDirection: false
      },
   });
 </script>
