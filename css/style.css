@@ -965,12 +965,12 @@ object
   position: relative;
 }
 
-.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__img {
+.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__link {
   display: block;
   overflow: hidden;
 }
 
-.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__img img {
+.p-home-works-swiper .swiper-slide__wrap .swiper-slide-img__link img {
   width: 250px;
   height: 250px;
   object-fit: cover;
