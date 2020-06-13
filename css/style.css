@@ -749,6 +749,7 @@ object
   font-family: "Crimson Text", serif;
   letter-spacing: 0.1em;
   line-height: 1.0;
+  margin-bottom: 10px;
 }
 
 .c-heading--ja {
@@ -867,7 +868,7 @@ object
 }
 
 .p-home-about .c-link-btn a {
-  border: solid 1px #333333;
+  border: solid 1px #ccc;
 }
 
 .p-home-about .c-link-btn a:hover {
