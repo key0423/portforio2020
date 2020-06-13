@@ -122,6 +122,11 @@
 }
 
 /*========== works ==========*/
+.p-home-works{
+  @include margin-bottom2_3(140px);
+}
+
+// タイトル部分
 .p-home-works--ttlbg{
   width: 100%;
   position: relative;
@@ -243,7 +248,18 @@
     font-weight: bold;
   }
 }
-
+.p-home-works{
+  .c-link-btn{
+    max-width: 240px;
+    margin: 0 auto;
+    a{
+      border: solid 1px #ccc;
+      a:hover{
+        border: solid 1px #60A6D3;
+      }
+    }
+  }
+}
 
 /*==========catch==========*/
 .l-home-catch{
