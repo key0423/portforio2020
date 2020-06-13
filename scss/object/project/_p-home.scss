@@ -160,10 +160,13 @@
     position: absolute;
     width: 100%;
     left: 0;
+    bottom: 40px;
     color: #fff;
-  padding: 20px;
-    background:#B5C1C4;
-    text-align: left;    
+    background: #B5C1C4;
+    text-align: left;
+    z-index: 500;
+    padding: 30px;
+    transform: translateY(100%);    
     &__cat{
       display: block;
       font-size: 12px;
