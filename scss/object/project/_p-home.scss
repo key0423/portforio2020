@@ -166,12 +166,15 @@
   }
   .swiper-slide__wrap {
     position: relative;
-    .swiper-slide__img{
+    .swiper-slide-img{
+      &__img{
+        display: block;
       img{
         width: 250px;
         height: 250px;
         object-fit: cover;
       }
+    }
     }
     .swiper-slide-box {
       position: absolute;
