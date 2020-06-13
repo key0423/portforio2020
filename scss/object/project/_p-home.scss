@@ -147,6 +147,16 @@
 
 // スライダー
 .p-home-works-swiper{
+  display: flex;
+  align-items: center;
+  .swiper-wrapper{
+    flex-basis: 50%;
+  }
+  .swiper-pagination{
+    flex-basis: 50%;
+  }
+}
+.p-home-works-swiper{
   .swiper-container {
     padding: 30px 0 50px;
   }
@@ -193,11 +203,32 @@
     border-radius: inherit;
     color: #333333;
     background: none;
+    &:before{
+      display:inline-block;
+      content:'';
+      width:100px;
+      height:1px;
+      background: #333333;
+      position:absolute;
+      top:50%;
+      right:-20px;
+      transition: .3s;
+    }
+    &:before{
+      display:inline-block;
+      content:'';
+      width:100px;
+      height:1px;
+      border: solid 1px #333333;
+      position:absolute;
+      top:50%;
+      right:-20px;
+      transition: .3s;
+    }
   }
   .swiper-pagination-bullet-active {
     font-size: 16px;
     font-weight: bold;
-    background: #007aff;
   }
 }
 
