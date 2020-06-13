@@ -1006,7 +1006,7 @@ object
   text-align: left;
   padding: 30px;
   transform: translateY(-40px);
-  box-shadow: 4px 6px 24px #cccccc;
+  box-shadow: 5px 5px 10px #cccccc;
 }
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-box__cat {
@@ -1026,6 +1026,7 @@ object
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-box__txt {
   display: block;
   font-size: 16px;
+  height: 40px;
 }
 
 .p-home-works-swiper .swiper-pagination-bullet {

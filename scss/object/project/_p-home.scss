@@ -198,7 +198,7 @@
       text-align: left;
       padding: 30px;
       transform: translateY(-40px);
-      box-shadow: 4px 6px 24px #cccccc;
+      box-shadow: 5px 5px 10px #cccccc;
       &__cat{
         display: block;
         font-size: 12px;
@@ -214,6 +214,7 @@
       &__txt{
         display: block;
         font-size: 16px;
+        height: 40px;
       }
     }
   }

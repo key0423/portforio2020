@@ -114,7 +114,7 @@
             <div class="swiper-slide__img swiper-slide-img">
               <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/600/1200"></a>
             </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt">comment box 3</span></div>
+            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 3</span></div>
           </div>
         </div>
         <div class="swiper-slide">
@@ -122,7 +122,7 @@
             <div class="swiper-slide__img swiper-slide-img">
               <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/1200/1200"></a>
             </div>
-            <div class="swiper-slide-box"><span class="swiper-slilde-box__cat">デザイン</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt">comment box 2</span></div>
+            <div class="swiper-slide-box"><span class="swiper-slilde-box__cat">デザイン</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 2</span></div>
           </div>
         </div>
         <div class="swiper-slide">
@@ -130,7 +130,7 @@
             <div class="swiper-slide__img swiper-slide-img">
               <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/800/1200"></a>
             </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">たいとるタイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt">comment box 2</span></div>
+            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">たいとるタイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 2</span></div>
           </div>
         </div>
         <div class="swiper-slide">
@@ -138,7 +138,7 @@
             <div class="swiper-slide__img swiper-slide-img">
               <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/1500/1200"></a>
             </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt">comment box 3</span></div>
+            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 3</span></div>
           </div>
         </div>
 
@@ -290,15 +290,49 @@
   });
 </script>
 
-<!-- header出現 -->
+
 <script>
+/*==================== 文字数制御 ====================*/
+// ▼文字列を省略して「…」を付与
+jQuery(function($) {
+  $('.js-text-overflow').each(function() {
+    var $target = $(this);
+    // オリジナルの文章を取得する
+    var html = $target.html();
+    // 対象の要素を、高さにautoを指定し非表示で複製する
+    var $clone = $target.clone();
+    $clone
+      .css({
+        display: 'none',
+        position : 'absolute',
+        overflow : 'visible'
+      })
+      .width($target.width())
+      .height('auto');
+    // DOMを一旦追加
+    $target.after($clone);
+    // 指定した高さになるまで、1文字ずつ消去していく
+    while((html.length > 0) && ($clone.height() > $target.height())) {
+      html = html.substr(0, html.length - 1);
+      $clone.html(html + '...');
+    }
+    // 文章を入れ替えて、複製した要素を削除する
+    $target.html($clone.html());
+    $clone.remove();
+  });
+});
+</script>
+
+
+<script>
+/*==================== 文字数制御 ====================*/
 $(function(){
   $(window).on('scroll',function(){
     var scroll_top = $(window).scrollTop();
     $('.l-header').each(function(){
       // 要素のドキュメント上の位置を取得
       var offset_top = $(this).offset().top,
-          top_margin = 100 ; // 画面上端からのマージン
+          top_margin = 800 ; // 画面上端からのマージン
       // スクロール量と要素の位置からマージンを引いた値を比較
       if( scroll_top > offset_top - top_margin ){
         // スクロール量が所定の位置を越えた時にfadeinクラスを付与
