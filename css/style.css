@@ -922,12 +922,16 @@ object
 .p-home-works--ttlbg:before {
   display: inline-block;
   content: '';
-  background: #829CAD;
+  background: #B8BEC6;
   width: 100%;
-  height: 120px;
+  height: 66%;
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.p-home-works--ttlbg .p-home-heading {
+  padding-bottom: 32px;
 }
 
 .p-home-works--ttlbg .p-home-heading .c-heading--ja {

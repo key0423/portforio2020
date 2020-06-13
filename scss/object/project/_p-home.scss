@@ -128,14 +128,15 @@
   &:before{
     display:inline-block;
     content:'';
-    background:$blue01;
+    background:$blue03;
     width:100%;
-    height: 120px;
+    height: 66%;
     position:absolute;
     left:0;
     bottom:0;
   }
   .p-home-heading{
+    padding-bottom: 32px;
     .c-heading--ja{
       color: #fff;
     }
