@@ -1,5 +1,5 @@
 /*----------_l-header----------*/
-.l-header{
+.l-header.none{
   display: none;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +50,7 @@
 }
 // スクロール後表示
 .l-header.show{
-  display: block;
+  display: flex;
   position: sticky;
   position: -webkit-sticky;/*Safari*/
   top: 0;

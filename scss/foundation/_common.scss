@@ -72,3 +72,11 @@ img{
     display: none;
   }
 }
+
+/*=======================
+投稿画像の上下左右カット
+=======================*/
+.object_fit_img{
+  object-fit: cover;
+  font-family: 'object-fit: cover;'
+}

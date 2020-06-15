@@ -556,9 +556,25 @@ img {
   }
 }
 
+/*=======================
+投稿画像の上下左右カット
+=======================*/
+.object_fit_img {
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
 /*==============================
 layout
 ==============================*/
+.l-works-sgl {
+  margin-bottom: 80px;
+}
+
+.l-works-page-btm {
+  margin-bottom: 100px;
+}
+
 /*----------_l-bottom-bnr----------*/
 .l-bottom-bnr .l-bottom-bnr-flex {
   display: flex;
@@ -584,6 +600,13 @@ layout
 
 .l-bottom-bnr-item a:hover {
   opacity: 0.7;
+}
+
+.breadcrumbs {
+  max-width: 1180px;
+  font-size: 14px;
+  padding: 10px 2%;
+  margin: 0 auto;
 }
 
 /*----------_l-cntent----------*/
@@ -616,7 +639,7 @@ layout
 }
 
 /*----------_l-header----------*/
-.l-header {
+.l-header.none {
   display: none;
   align-items: center;
   justify-content: space-between;
@@ -624,17 +647,17 @@ layout
   border-bottom: solid 1px #ccc;
 }
 
-.l-header-logo {
+.l-header.none-logo {
   max-width: 180px;
 }
 
-.l-header-logo a {
+.l-header.none-logo a {
   width: 100%;
   padding: 10px;
   display: block;
 }
 
-.l-header-nav {
+.l-header.none-nav {
   display: inline-block;
   margin-left: auto;
 }
@@ -672,7 +695,7 @@ layout
 }
 
 .l-header.show {
-  display: block;
+  display: flex;
   position: sticky;
   position: -webkit-sticky;
   /*Safari*/
@@ -684,6 +707,10 @@ layout
 
 .l-flex-box {
   display: flex;
+}
+
+.l-page-ttl {
+  margin: 40px auto;
 }
 
 /*==============================
@@ -757,6 +784,149 @@ object
   font-size: 18px;
   letter-spacing: 0.1em;
   line-height: 1.6;
+}
+
+.c-sec-editor {
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+}
+
+.c-sec-editor h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 30px;
+  padding: 20px 0;
+  border-top: solid 2px #829CAD;
+  border-bottom: solid 2px #829CAD;
+}
+
+@media screen and (max-width: 767px) {
+  .c-sec-editor h2 {
+    font-size: 20px;
+  }
+}
+
+.c-sec-editor h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 60px;
+  padding: 10px 16px;
+  background: #f0f0f0;
+  border-left: solid 16px #829CAD;
+}
+
+@media screen and (max-width: 767px) {
+  .c-sec-editor h3 {
+    font-size: 18px;
+  }
+}
+
+.c-sec-editor h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .c-sec-editor h4 {
+    font-size: 18px;
+  }
+}
+
+.c-sec-editor strong {
+  font-weight: bold;
+}
+
+.c-sec-editor em {
+  font-style: italic;
+}
+
+.c-sec-editor p {
+  margin-bottom: 1.5em;
+}
+
+.c-sec-editor ol {
+  list-style: decimal;
+  padding-left: 2em;
+  margin-bottom: 1.5em;
+}
+
+.c-sec-editor ul {
+  list-style: inherit;
+  padding-left: 2em;
+  margin-bottom: 1.5em;
+}
+
+.c-sec-editor ul.wp-block-gallery {
+  padding-left: 0;
+}
+
+.c-sec-editor a {
+  color: #000;
+  transition: 0.3s;
+  font-weight: bold;
+  position: relative;
+}
+
+.c-sec-editor a::before {
+  content: "";
+  border-bottom: solid 1px #000;
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transition: 0.2s;
+}
+
+.c-sec-editor a:hover::before {
+  width: 100%;
+}
+
+.c-sec-editor .wp-block-quote {
+  position: relative;
+  padding: 35px 15px 10px 15px;
+  box-sizing: border-box;
+  font-style: italic;
+  background: #f5f5f5;
+  color: #777777;
+  border-left: 4px solid #9dd4ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  margin-bottom: 20px;
+}
+
+.c-sec-editor .wp-block-quote:before {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  content: "\f10d";
+  font-family: FontAwesome;
+  color: #9dd4ff;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.c-sec-editor .wp-block-quote p {
+  padding: 0;
+  margin: 7px 0;
+  line-height: 1.7;
+}
+
+.c-sec-editor .wp-block-quote cite {
+  display: block;
+  text-align: right;
+  color: #888888;
+  font-size: 0.9em;
+}
+
+.c-sec-editor dl dt {
+  font-weight: bold;
+  border-bottom: solid 1px #000;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /*----------project----------*/
@@ -1021,7 +1191,9 @@ object
   padding: 10px 0;
   letter-spacing: 0.1em;
   border-bottom: solid 2px #fff;
-  height: 30px;
+  height: 52px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-box__txt {
@@ -1082,7 +1254,7 @@ object
 
 .p-home-works .c-link-btn {
   max-width: 240px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .p-home-works .c-link-btn a {
@@ -1152,6 +1324,16 @@ object
 }
 
 /*==========Methods==========*/
+.p-home-methods {
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-methods {
+    margin-bottom: calc(90px * 2/3);
+  }
+}
+
 .p-home-methods__left {
   flex-basis: 50%;
   background: url(../img/home/home_img03.jpg) no-repeat;
@@ -1216,6 +1398,7 @@ object
 
 .p-home-methods-ttl .p-home-heading {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .p-home-methods-ttl .p-home-heading .c-heading--en {
@@ -1323,6 +1506,22 @@ object
   }
 }
 
+/*==========　instagram　==========*/
+.p-home-insta {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-insta {
+    margin-bottom: calc(30px * 2/3);
+  }
+}
+
+.p-home-insta .iswg-images-item {
+  width: 24% !important;
+}
+
+/*==========　contact　==========*/
 .p-home-contact--bg {
   background: url(../img/home/home_img05.jpg);
   background-size: cover;
@@ -1368,6 +1567,155 @@ object
 
 .p-home-contact .c-link-btn a a:hover {
   border: solid 1px #60A6D3;
+}
+
+/*==================== p-works ====================*/
+.p-works-page-ttl {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "HiraMinPro-W6", "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 40px;
+}
+
+.p-works-page-ttl .p-works-page-ttl__txt {
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  padding-bottom: 4px;
+}
+
+.p-works-page-ttl .p-works-ttl__cat {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #838383;
+  padding-bottom: 10px;
+  border-bottom: solid 2px #60A6D3;
+}
+
+.p-works-sgl-main-img {
+  background: #eeeeee;
+  padding: 60px 0;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-works-sgl-main-img {
+    margin-bottom: calc(60px * 2/3);
+  }
+}
+
+.p-works-sgl-main-img .p-works-sgl-main-img--maw {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.p-works-sgl-main-img .p-works-sgl-main-img--maw img {
+  height: 600px;
+  box-shadow: 6px 6px 20px #cccccc;
+}
+
+.p-works-sgl-info {
+  max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-works-sgl-info {
+    margin-bottom: calc(60px * 2/3);
+  }
+}
+
+.p-works-sgl-info .p-works-sgl-info__ttl {
+  flex-basis: 28%;
+  color: #838383;
+  padding-right: 70px;
+  position: relative;
+  margin-right: 4%;
+  margin-bottom: 20px;
+}
+
+.p-works-sgl-info .p-works-sgl-info__ttl::before {
+  display: inline-block;
+  content: '';
+  width: 30%;
+  height: 1px;
+  background: #cccccc;
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 0;
+}
+
+.p-works-sgl-info .p-works-sgl-info__txt {
+  flex-basis: 64%;
+  margin-bottom: 20px;
+}
+
+.p-works-page-btm--flex {
+  display: flex;
+  justify-content: center;
+}
+
+.p-works-page-btm__next a, .p-works-page-btm__prev a {
+  min-width: 300px;
+  width: 100%;
+  display: block;
+  padding: 50px 20px 20px;
+  border: solid 1px #bbbbbb;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  letter-spacing: 0.05em;
+}
+
+.p-works-page-btm__next a::before, .p-works-page-btm__prev a::before {
+  transition: 0.5s;
+  display: inline-block;
+  font-size: 42px;
+  color: #B8BEC6;
+  font-family: "Caveat", cursive;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  transform: rotate(340deg);
+}
+
+.p-works-page-btm__next a::after, .p-works-page-btm__prev a::after {
+  display: inline-block;
+  content: '';
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background: #dcdcdc;
+  transition: 0.5s;
+}
+
+.p-works-page-btm__next a:hover, .p-works-page-btm__prev a:hover {
+  background: #B8BEC6;
+}
+
+.p-works-page-btm__next a:hover::before, .p-works-page-btm__prev a:hover::before {
+  color: #ffffff;
+}
+
+.p-works-page-btm__next a:hover:after, .p-works-page-btm__prev a:hover:after {
+  width: 25%;
+}
+
+.p-works-page-btm__next a::before {
+  content: 'next';
+}
+
+.p-works-page-btm__next a::after {
+  right: -10%;
+}
+
+.p-works-page-btm__prev a::before {
+  content: 'prev';
+}
+
+.p-works-page-btm__prev a::after {
+  left: -10%;
 }
 
 /*----------utility----------*/
