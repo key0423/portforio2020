@@ -26,31 +26,31 @@
 <meta property="og:image" content="" />
 <meta property="og:site_name"  content="" />
 <meta property="og:description" content="" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Damion&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="//unpkg.com/swiper/css/swiper.min.css">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link href="//fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Damion&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+<?php wp_head(); ?>
 </head>
 
 <body>
 <header class="l-header">
 <h1 class="l-header-logo"><a href="/">
 <img src="img/common/header_logo.svg" alt="Keiko Kobayashi"></a></h1>
-<nav class="l-header-nav">
+<nav class="l-header-nav --sp-none">
  <ul class="l-header-nav-menu l-flex-box">
-  <li class="l-header-nav-menu__item"><a href="/shipsmag/">Top</a></li>  
-  <li class="l-header-nav-menu__item"><a href="/shipsmag/">About</a></li>
-  <li class="l-header-nav-menu__item"><a href="/shipsmag/">Works</a></li>
-  <li class="l-header-nav-menu__item l-header-nav__item--contact"><a href="/contact"><i class="fas fa-envelope"></i></a></li>
-  <li class="l-header-nav-menu__item l-header-nav__item--sns"><a href="/contact"><i class="fab fa-instagram"></i></a></li>
+  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/">Top</a></li>  
+  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/about/">About</a></li>
+  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/works/">Works</a></li>
+  <li class="l-header-nav-menu__item l-header-nav__item--contact"><a href="<?php echo home_url(); ?>/contact"><i class="fas fa-envelope"></i></a></li>
+  <li class="l-header-nav-menu__item l-header-nav__item--sns"><a href="//www.instagram.com/key_webdesigner/"><i class="fab fa-instagram"></i></a></li>
  </ul>
 </nav>
 </header>
 
 <main class="main">
 <!-- slider -->
-<<<<<<< HEAD
  <div class="p-home-visual">
    <div class="p-home-visual-txt l-container-lg">
      <h2 class="p-home-name">Keiko<br>Kobayashi<span class="p-home-name--small">web designer</span></h2>
@@ -64,15 +64,6 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div><!-- /.swiper-container -->
-=======
- <div class="l-home-visual">
-   <h2 class="p-home-name">Keiko <br> Kobayashi</h2>
-  <div class="p-home-visual__list swiper-slider">
-   <div class="swiper-slide"><img src="img/slider_img.jpg"></div>
-   <div class="swiper-slide"><img src="img/slider_img.jpg"></div>
-   <div class="swiper-slide"><img src="img/slider_img.jpg"></div>
-  </div>
->>>>>>> parent of 0a99d67... index変更
   <div class="p-home-scroll_area">
    <div class="p-home-scroll-btn">Scroll</div>
   </div>
@@ -91,7 +82,7 @@
   <div class="p-home-about l-container-lg">
     <h2 class="p-home-heading --pc-none"><span class="c-heading--en">About</span><span class="c-heading--ja">私について</span></h2>
    <div class="p-home-about__img">
-    <img src="img/home/home_img01.jpg" alt="本人の写真。趣味のカメラ撮影を楽しんでいる姿">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/home/home_img01.jpg" alt="本人の写真。趣味のカメラ撮影を楽しんでいる姿">
    </div>
    <div class="p-home-about__txt p-home-about-txt">
      <h2 class="p-home-heading --sp-none"><span class="c-heading--en">About</span><span class="c-heading--ja">私について</span></h2>
@@ -100,7 +91,7 @@
      大切に制作を行っています。
     </p>
     <div class="c-link-btn">
-      <a href="#"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
+      <a href="<?php echo home_url(); ?>/about/"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
      </div>
    </div>
   </div>
@@ -158,11 +149,11 @@
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </div>
-    </div>
+    </div><!-- /.swiper-container -->
+    </div><!-- /.p-home-works-swiper-slider -->
    </div><!-- /.p-home-works__txt -->
    <div class="c-link-btn">
-    <a href="#"><span class="c-link-btn__txt">Contact</span><span class="c-link-btn__arrow"></span></a>
+    <a href="<?php echo home_url(); ?>/works/"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
   </div>
 
   </section><!-- /.p-home-works.l-container-lg -->
@@ -181,7 +172,7 @@
     <ul class="p-home-skill-list">
      <li class="p-home-skill-list__item p-home-skill-list__item01">
       <div class="p-home-skill__icon p-home-skill-icon">
-        <div class="p-home-skill-icon__img"><img src="img/home/home_icon01.svg" alt="design">
+        <div class="p-home-skill-icon__img"><img src="<?php echo get_template_directory_uri(); ?>/img/home/home_icon01.svg" alt="design">
         </div>
         <div class="p-home-skill-icon__txt">Cording</div>
       </div>
@@ -190,7 +181,7 @@
      </li>
      <li class="p-home-skill-list__item p-home-skill-list__item02">
       <div class="p-home-skill__icon p-home-skill-icon">
-        <div class="p-home-skill-icon__img"><img src="img/home/home_icon02.svg" alt="design">
+        <div class="p-home-skill-icon__img"><img src="<?php echo get_template_directory_uri(); ?>/img/home/home_icon02.svg" alt="design">
         </div>
         <div class="p-home-skill-icon__txt">Design</div>
       </div>
@@ -199,7 +190,7 @@
      </li>
      <li class="p-home-skill-list__item p-home-skill-list__item03">
       <div class="p-home-skill__icon p-home-skill-icon">
-        <div class="p-home-skill-icon__img"><img src="img/home/home_icon03.svg" alt="design">
+        <div class="p-home-skill-icon__img"><img src="<?php echo get_template_directory_uri(); ?>/img/home/home_icon03.svg" alt="design">
         </div>
         <div class="p-home-skill-icon__txt">Photo</div>
       </div>
@@ -213,9 +204,11 @@
 
 <div class="l-home-insta">
   <section class="p-home-insta l-container-lg">
-    <h2 class="p-home-heading --pc-none"><span class="p-home-heading--en">Instagram</span><span class="p-home-heading-ja">勉強の積み上げ</span></h2>
+    <h2 class="p-home-heading"><span class="c-heading--en">Instagram</span><span class="c-heading--ja">勉強の積み上げ</span></h2>
     <div class="p-home-insta__post">
-      <!-- Instaここに表示 -->
+    <div id="insta-widget" class="iswg-base" data-username="key_webdesigner" data-display-image-count="4" data-wrapper-width data-show-icon=false data-show-biography=false data-show-follow-btn=false data-show-username=false></div>
+    <script src="//insta-window-tool.web.app/v1/insta-window.js"></script>
+      <div class="p-home-insta__name"><a href="//www.instagram.com/key_webdesigner/" class="p-home-insta__name--link">@key_webdesigner</a></div>
     </div>
   </section><!-- /.p-home-insta.l-container-lg -->
 </div><!-- /.l-home-insta -->
@@ -228,7 +221,7 @@
       <p class="p-home-contact__txt">「合いそうだな！」と感じていただけましたらお気軽にご連絡ください。<br>企業様、サイトを作りたいお客様とのいいご縁をお待ちしております。
       </p>
       <div class="c-link-btn">
-        <a href="#"><span class="c-link-btn__txt">Contact</span><span class="c-link-btn__arrow"></span></a>
+        <a href="<?php echo home_url(); ?>/contact/"><span class="c-link-btn__txt">Contact</span><span class="c-link-btn__arrow"></span></a>
       </div>
     </section><!-- /.p-home-contact.l-container-lg -->
   </div> <!-- /.l-home-contact--bg -->
@@ -237,11 +230,11 @@
 <aside class="l-bottom-bnr">
   <div class="l-bottom-bnr-flex l-container-lg">
     <div class="l-bottom-bnr-grid__item l-bottom-bnr-item">
-      <a href=""><img src="img/common/blog_bnr.jpg" alt="ブログ・気ままに更新中">
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/common/blog_bnr.jpg" alt="ブログ・気ままに更新中">
       </a>
     </div><!-- /.l-bottom-bnr-grid__item.l-bottom-bnr-item01 -->
     <div class="l-bottom-bnr-grid__item l-bottom-bnr-item">
-      <a href=""><img src="img/common/insta_bnr.jpg" alt="Instagram　勉強の積み上げ">
+      <a href="//www.instagram.com/key_webdesigner/"><img src="<?php echo get_template_directory_uri(); ?>/img/common/insta_bnr.jpg" alt="Instagram　勉強の積み上げ">
       </a>
     </div><!-- /.l-bottom-bnr-grid__item.l-bottom-bnr-item02 -->
   </div><!-- ./l-bottom-bnr-grid -->
@@ -255,7 +248,7 @@
 
 <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <!-- //スライダーswiper-js -->
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="//unpkg.com/swiper/js/swiper.min.js"></script>
 <script>
   let mySwiper = new Swiper ('.swiper-container-main', {
     // オプションの設定
