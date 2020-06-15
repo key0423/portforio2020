@@ -23,14 +23,14 @@
 </head>
 
 <body>
-<header class="l-header">
+<header class="l-header none">
 
 <?php if ( is_home() || is_front_page() ) : ?>
 <h1 class="l-header-logo"><a href="/">
-<img src="<?php echo get_template_directory_uri(); ?>img/common/header_logo.svg" alt="Keiko Kobayashi"></a></h1>
+<img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></h1>
 <?php else : ?>
 <p class="l-header-logo"><a href="/">
-<img src="<?php echo get_template_directory_uri(); ?>img/common/header_logo.svg" alt="Keiko Kobayashi"></a></p>
+<img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></p>
 <?php endif; ?>
 
 <nav class="l-header-nav --sp-none">
@@ -43,5 +43,5 @@
  </ul>
 </nav>
 </header>
-
+<?php get_template_part("template-parts/breadcrumb"); ?>
 <?php get_template_part("template-parts/ttl_area"); ?>

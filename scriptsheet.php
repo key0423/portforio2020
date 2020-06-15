@@ -87,7 +87,7 @@ $(function(){
     $('.l-header').each(function(){
       // 要素のドキュメント上の位置を取得
       var offset_top = $(this).offset().top,
-          top_margin = 800 ; // 画面上端からのマージン
+          top_margin = 80 ; // 画面上端からのマージン
       // スクロール量と要素の位置からマージンを引いた値を比較
       if( scroll_top > offset_top - top_margin ){
         // スクロール量が所定の位置を越えた時にfadeinクラスを付与
@@ -129,4 +129,11 @@ pagetop.click(function () {
   return false;
 });
 });
+</script>
+
+
+<!-- =================== 画像フィット =======================-->
+<script src="ofi.min.js"></script>
+<script>
+  objectFitImages('img.object_fit_img');
 </script>
