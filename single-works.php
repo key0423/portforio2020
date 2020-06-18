@@ -3,6 +3,7 @@
 <?php 
 $url = get_field('url');
 $img_url = get_field('img_url');
+$img_size = $img_url['sizes']['large'];
 $img_alt = get_field('img_alt');
 $position = get_field('position');
 $period = get_field('period');
@@ -12,7 +13,7 @@ $txt_area = get_field('txt_area');
   <div class="p-works-sgl-top">
     <div class="p-works-sgl-main-img">
       <div class="p-works-sgl-main-img--maw l-container-lg">
-        <img class="object_fit_img" src="<?php echo $img_url ?>" alt="<?php echo $img_alt ?>">
+        <img class="object_fit_img" src="<?php echo $img_size ?>" alt="<?php echo $img_alt ?>">
       </div>
     </div>
     <dl class="p-works-sgl-info l-container-lg">

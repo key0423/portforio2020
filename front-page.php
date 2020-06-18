@@ -8,9 +8,10 @@
    </div>
    <div class="swiper-container-main">
     <div class="p-home-visual__list swiper-wrapper">
-      <div class="swiper-slide"><img src="http://placekitten.com/1200/800"></div>
+      <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/home/home_slider.jpg" alt="Keiko Kobayashi"></div>
+      <!-- <div class="swiper-slide"><img src="http://placekitten.com/1200/800"></div>
       <div class="swiper-slide"><img src="http://placekitten.com/800/1200"></div>
-      <div class="swiper-slide"><img src="http://placekitten.com/1600/800"></div>
+      <div class="swiper-slide"><img src="http://placekitten.com/1600/800"></div> -->
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -46,7 +47,6 @@
      </div>
    </div>
   </div>
-
 </div>
 
 <div class="l-home-works">
@@ -54,55 +54,58 @@
     <div class="p-home-works--ttlbg">
       <h2 class="p-home-heading l-container-lg"><span class="c-heading--en">Works</span><span class="c-heading--ja">サイトの目的を考え、<br>丁寧に制作。</span></h2>
     </div>
-   <div class="p-home-works__txt l-container-lg">
-    <div class="p-home-works-swiper-slider">
 
-      
-     <div class="swiper-container p-home-works-swiper">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="swiper-slide__wrap">
-            <div class="swiper-slide__img swiper-slide-img">
-              <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/600/1200"></a>
-            </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 3</span></div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide__wrap">
-            <div class="swiper-slide__img swiper-slide-img">
-              <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/1200/1200"></a>
-            </div>
-            <div class="swiper-slide-box"><span class="swiper-slilde-box__cat">デザイン</span><span class="swiper-slide-box__ttl js-text-overflow">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント</span></div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide__wrap">
-            <div class="swiper-slide__img swiper-slide-img">
-              <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/800/1200"></a>
-            </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">たいとるタイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 2</span></div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-slide__wrap">
-            <div class="swiper-slide__img swiper-slide-img">
-              <a href="#" class="swiper-slide-img__link"><img src="http://placekitten.com/1500/1200"></a>
-            </div>
-            <div class="swiper-slide-box"><span class="swiper-slide-box__cat">コーディング</span><span class="swiper-slide-box__ttl">タイトルタイトルタイトルタイトルタイトルタイトル</span><span class="swiper-slide-box__txt js-text-overflow">comment box 3</span></div>
-          </div>
-        </div>
+    <div class="l-container-lg">
+    <ul class="p-works-arc-list">
 
 
+<?php 
+$args = array(
+  'post_type' => 'works',
+  'posts_per_page' => 4, // 表示件数の指定
+);
+$the_query = new WP_Query($args);
 
+if($the_query -> have_posts()):
+while($the_query->have_posts()):$the_query->the_post();
+
+$id = get_the_id();
+$link = get_permalink( $id );
+$url = get_field('url',$id);
+$img_url = get_field('img_url');
+$img_size = $img_url['sizes']['large'];
+$img_alt = get_field('img_alt', $id);
+$txt_area = get_field('arc_txt', $id);
+?>
+    <li class="p-works-arc-list__item p-works-arc-list-item"> 
+      <a href="<?php echo $link ?>" class="p-works-arc-list-item_link">
+      <div class="p-works-arc-list-item__img">
+        <img class="object_fit_img" src="<?php echo $img_size ?>" alt="<?php echo $img_alt ?>">
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div><!-- /.swiper-container -->
-    </div><!-- /.p-home-works-swiper-slider -->
-   </div><!-- /.p-home-works__txt -->
+      <div class="p-works-arc-list-item__txt-area p-works-list-item-txt">
+        <div class="p-works-list-item-txt-cat">
+<?php
+  if ($terms = get_the_terms($post->ID, 'part')) {
+    foreach ( $terms as $term ) {
+      echo ('<span>') ;
+      echo esc_html($term->name)  ;
+      echo ('</span>') ;
+    }
+  }
+?>
+        </div>
+        <h2 class="p-works-list-item-txt__ttl js-text-overflow"><?php the_title(); ?></h2>
+        <p class="p-works-list-item-txt__txt"><?php echo $txt_area ?></p>
+      </div>
+      </a>
+    </li>
+<?php  endwhile; ?>
+<?php  endif; ?>
+
+    </ul>
+
+
+
    <div class="c-link-btn">
     <a href="<?php echo home_url(); ?>/works/"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
   </div>
@@ -165,18 +168,7 @@
 </div><!-- /.l-home-insta -->
 </main>
 
-<div class="l-home-contact">
-  <div class="p-home-contact--bg">
-    <section class="p-home-contact l-container-lg">
-      <h2 class="p-home-heading"><span class="c-heading--en">Contact</span><span class="c-heading--ja">お問い合わせ</span></h2>
-      <p class="p-home-contact__txt">「合いそうだな！」と感じていただけましたらお気軽にご連絡ください。<br>企業様、サイトを作りたいお客様とのいいご縁をお待ちしております。
-      </p>
-      <div class="c-link-btn">
-        <a href="<?php echo home_url(); ?>/contact/"><span class="c-link-btn__txt">Contact</span><span class="c-link-btn__arrow"></span></a>
-      </div>
-    </section><!-- /.p-home-contact.l-container-lg -->
-  </div> <!-- /.l-home-contact--bg -->
-</div><!-- /.l-home-insta -->
+<?php get_template_part("template-parts/contact_area"); ?>
 
 <aside class="l-bottom-bnr">
   <div class="l-bottom-bnr-flex l-container-lg">

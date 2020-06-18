@@ -26,14 +26,14 @@ body{
 }
 @include mq('sp') {
   body{
-  font-size: 12px;
+  font-size: 13px;
 } 
 }
 a {
   color:$basic_color;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; 
+  -webkit-transition:0.3s;
+  -o-transition:0.3s;
+  transition:0.3s; 
   &:hover {
     text-decoration: none; 
   }
@@ -42,6 +42,7 @@ a {
 img{
   width: 100%;
   height: auto;
+  -webkit-backface-visibility: hidden;
 }
 
 /*=======================

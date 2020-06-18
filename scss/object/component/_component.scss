@@ -15,7 +15,7 @@
 // タイトル
 .c-heading--en{
   display: block;
-  font-size:64px;
+  font-size:62px;
   font-family:$font-en01;
   letter-spacing: 0.1em;
   line-height:1.0;
@@ -28,3 +28,11 @@
   line-height:1.6;
 }
 
+@include mq('sp') {
+  .c-heading--en{
+    font-size:48px;
+  }
+  .c-heading--ja{
+    font-size: 16px;
+  }
+}

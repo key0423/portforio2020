@@ -10,9 +10,9 @@
     // },
     slidesPerView: 1,
     spaceBetween: 0,
-    autoplay: {
-      delay:5000,
-    },
+    // autoplay: {
+    //   delay:5000,
+    // },
     loop: true,
     speed: 5000,
     centeredSlides : true,
@@ -23,20 +23,32 @@
 <script>
   var swiper = new Swiper('.p-home-works-swiper', {
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        // renderBullet: function (index, className) {
-        //   return '<span class="' + className + '">' + (index + 1) + '</span>';
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + "テキスト" + '</span>';
-        },
-      },
-      slidesPerView: 1,
+		el: '.swiper-pagination',
+		type: 'custom',
+		renderCustom: function (swiper, current, total) {
+			// if (swiper.isBeginning) {
+				return '<span class="">' + "ほげ" + '</span>';
+				//2枚目
+				return '<span>' + "<?php the_title(); ?>" + '</span>';
+				return '<span>' + "<?php the_title(); ?>" + '</span>';
+				return '<span>' + "<?php the_title(); ?>" + '</span>';
+			}
+		}
+	},
+
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //     renderBullet: function (index, className) {
+    //       return '<span class="' + className + '">' + "<?php the_title(); ?>" + '</span>';
+    //     },
+    //   },
+    slidesPerView: 1,
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
     loop: true, //ループさせる
     centeredSlides:true,
-     effect: "fade", //フェードのエフェクト
+    effect: "fade", //フェードのエフェクト
      autoplay: {
      delay: 5000, //４秒後に次の画像へ
      disableOnInteraction: false, //ユーザー操作後に自動再生を再開する

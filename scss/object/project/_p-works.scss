@@ -1,4 +1,237 @@
-/*==================== p-works ====================*/
+/*==================== p-works-archive ====================*/
+// archiveタイトル
+.p-works-arc-ttl-bg{
+  padding: 80px 2%;
+  background:url(../img/page_ttl/ttl_img_works.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  @include margin-bottom2_3(60px);
+  &::before{
+    display:inline-block;
+    content:'';
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(43, 108, 150, 0.7);
+  }
+  .p-works-arc-ttl{
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .p-works-arc-heading{
+    max-width: 300px;
+    margin: 0 auto 0 0;
+    color: #ffffff;
+    position: relative;
+    .c-page-heading--en{
+      display: block;
+      font-size: 64px;
+      font-family: $font-en01;
+      letter-spacing: 0.2em;
+      line-height: 1.2;
+      position: relative;
+      &::before{
+        display:inline-block;
+        content:'';
+        background:#ffffff;
+        width: 800%;
+        height: 2px;
+        position: absolute;
+        left: calc(-720%);
+        bottom: 0;
+      }
+    }
+    .c-page-heading--ja{
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+  }
+}
+
+
+
+.p-works-arc-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // 3つ並び
+   &__item{
+    flex-basis:calc(94% * 1/3);
+    max-width: 560px;
+    margin: 0 auto 48px;
+  }
+  &__item:nth-child(5n-2),
+  &__item:nth-child(5n-1){    
+    margin-right: 3%;
+  }
+
+  // 2つ並び
+  &__item:nth-child(5n-4),
+  &__item:nth-child(5n-3){
+    flex-basis: 48%;
+    max-width: 560px;
+    margin-bottom: 60px;
+  }
+  &__item:nth-child(5n-4){
+    margin-right:4%; 
+  }
+}
+
+@include mq('sp') {
+  .p-works-arc-list{
+    display: block;
+    // 3つ並び
+    &__item{
+      margin: 0 auto 48px;
+    }
+    &__item:nth-child(5n-2),
+    &__item:nth-child(5n-1){    
+      margin-right: auto;
+    }
+    &__item:nth-child(5n-4){
+      margin-right:auto; 
+    }
+  }  
+}
+
+/*==========item内画像調整==========*/
+// 1.2.6.7個以外
+.p-works-arc-list__item:not(:nth-child(5n-4)),
+.p-works-arc-list__item:not(:nth-child(5n-3)){
+  .p-works-arc-list-item__img{
+    width: 100%;
+    img{
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// 1.2.6.7個
+.p-works-arc-list__item:nth-child(5n-4),
+.p-works-arc-list__item:nth-child(5n-3){
+  .p-works-arc-list-item__img{
+    width: 100%;
+    img{
+      width: 100%;
+      height: 340px;
+    }
+  }
+}
+@include mq('sp') {
+  // 1.2.6.7個以外
+  .p-works-arc-list__item:not(:nth-child(5n-4)),
+  .p-works-arc-list__item:not(:nth-child(5n-3)){
+    .p-works-arc-list-item__img{
+      width: 100%;
+      img{
+        width: 100%;
+        height: 220px;
+      }
+    }
+  }  
+  // 1.2.6.7個
+  .p-works-arc-list__item:nth-child(5n-4),
+  .p-works-arc-list__item:nth-child(5n-3){
+    .p-works-arc-list-item__img{
+      width: 100%;
+      img{
+        width: 100%;
+        height: 220px;
+      }
+    }
+  } 
+}
+
+/*==========item内テキスト==========*/
+// 1.2.6.7個以外
+.p-works-arc-list-item{
+  .p-works-list-item-txt{
+    &__ttl{
+      display: block;
+      font-size: 18px;
+      line-height: 1.4;
+      padding: 6px 0 10px;
+      letter-spacing: 0.1em;
+      height: 44px;
+      overflow: hidden;
+    }
+    &__txt{
+      height: 44px;
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      overflow: hidden;
+    }    
+  } 
+}
+// 1.2.6.7個
+.p-works-arc-list-item:nth-child(5n-4),
+.p-works-arc-list-item:nth-child(5n-3){
+  .p-works-list-item-txt{
+    width: 92%;
+    color: #fff;
+    background:$gray03;
+    padding: 30px;
+    box-shadow: 5px 5px 10px #cccccc;
+    transform: translate(8%,-20px);
+    &__ttl{
+      display: block;
+      font-size: 24px;
+      line-height: 1.4;
+      padding: 10px 0;
+      letter-spacing: 0.1em;
+      border-bottom: solid 2px #fff;
+      height: 60px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    &__txt{
+      height: 40px;
+      display: block;
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
+}
+@include mq('sp') {
+  // 1.2.6.7個
+.p-works-arc-list-item:nth-child(5n-4),
+.p-works-arc-list-item:nth-child(5n-3){
+  .p-works-list-item-txt{
+    width: 100%;
+    color:#333333;
+    background:none;
+    padding:0;
+    box-shadow:none;
+    transform:none;
+    &__ttl{
+      display: block;
+      font-size: 18px;
+      line-height: 1.4;
+      padding: 6px 0 10px;
+      letter-spacing: 0.1em;
+      height: 44px;
+      overflow: hidden;
+    }
+    &__txt{
+      height: 44px;
+      display: block;
+      font-size: 14px;
+      overflow: hidden;
+    }    
+  } 
+}
+}
+
+
+/*==================== p-works-sngle ====================*/
 // singleタイトル
 .p-works-page-ttl{
   font-family:$mincho_ff;
@@ -33,24 +266,31 @@
   }
 }
 
+// 基本情報
 .p-works-sgl-info{
   max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   @include margin-bottom2_3(60px);
+  background: #829CAD;
+  padding: 40px 2%;
+  color: #fff;
   .p-works-sgl-info__ttl{
-    flex-basis:28%;
-    color:$gray01;
+    flex-basis:20%;
     padding-right: 70px;
     position: relative;
     margin-right: 4%;
     margin-bottom: 20px;
+    &:last-of-type{
+      margin-bottom: 0;
+   } 
     &::before{
       display:inline-block;
       content:'';
       width: 30%;
-      height: 1px;
-      background: #cccccc;
+      height: 2px;
+      background: #dddddd;
       position:absolute;
       top: calc(50% - 2px);
       right:0;
@@ -59,9 +299,13 @@
   .p-works-sgl-info__txt{
     flex-basis: 64%;
     margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+   } 
   }
 }
 
+// 前後ボタン
 .p-works-page-btm{
   &--flex{
     display: flex;

@@ -1,0 +1,268 @@
+/*----------_about.scss----------*/
+.p-about-catch{
+  &-bg{
+    background:url(../img/about/about_img01.jpg);
+    background-size: cover;
+  }
+}
+
+// archiveタイトル
+.p-about-ttl{
+  position: relative;
+  max-width: 1140px;
+  padding: 80px 2%;
+  margin: 0 auto;
+  // @include margin-bottom2_3(60px);
+  .p-about--heading{
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+    text-align: right;
+    .c-page-heading--en{
+      display: block;
+      font-size: 64px;
+      font-family: $font-en01;
+      letter-spacing: 0.2em;
+      line-height: 1.2;
+      position: relative;
+      &::before{
+        display:inline-block;
+        content:'';
+        background:#ffffff;
+        width: 800%;
+        height: 2px;
+        position: absolute;
+        left: calc(-700%);
+        bottom: 0;
+      }
+    }
+    .c-page-heading--ja{
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+  }
+}
+@include mq('sp') {
+  .p-about-ttl{
+    padding: 60px 2%;
+    .p-about--heading{
+      padding-left: 4%;
+      .c-page-heading--en{
+        font-size: 48px;
+        &::before{
+          width: 800%;
+          left: calc(-700%);
+        }
+      }
+      .c-page-heading--ja{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+//top
+.p-about-catch-top{
+  &__txt01{
+    text-align: center;
+    margin-bottom: 40px;
+    span{
+      display: inline-block;
+      font-size: 24px;
+      letter-spacing: 0.2em;
+      padding: 0 12px;
+      background: #ffffff;
+    }
+    span:first-child{
+      margin-bottom:10px;
+    }
+  }
+}
+@include mq('sp') {
+  .p-about-catch-top{
+    &__txt01{
+      margin-bottom: 30px;
+      span{
+        display: inline-block;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        padding:0 10px;
+      }
+      span:first-child{
+        margin-bottom:10px;
+      }
+    }
+  }  
+}
+
+
+/*=======================
+middle
+=======================*/
+.p-about-catch-middle{
+  position: relative;
+  padding-bottom: 160px;
+  &__ttl{
+    position: absolute;
+    font-family: $font-en03;
+    color: #ffffff;
+    top: 40px;
+    left: 47%;
+    z-index: 100;
+    font-size: 72px;
+    text-shadow:2px 2px 6px $blue02;
+    transform: rotate(340deg);
+  }
+  &__img{
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.18);
+    max-width: 630px;
+    width: 100%;
+  }
+  &__txt{
+    max-width: 540px;
+    position: absolute;
+    top: 100px;
+    right: 2%;
+    background: #ffffff;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.18);
+  }
+}
+@include mq('sp') {
+  .p-about-catch-middle{
+    position: relative;
+    padding-bottom: 60px;
+    &__ttl{
+      top:0;
+      left: 2%;
+      font-size: 64px;
+    }
+    &__img{
+      margin: 0 auto;
+    }
+    &__txt{
+      max-width: 630px;
+      position: static;
+    }
+  }
+}
+
+/*=======================
+ p-about-catch-middle-txt
+=======================*/
+.p-about-catch-middle-txt{
+  padding:40px 4%;
+  &__p{
+    line-height:1.8;
+    letter-spacing: 0.05em;
+  }
+  &__p:not(:last-child){
+    margin-bottom: 30px;
+  }
+}
+@include mq('sp') {
+  .p-about-catch-middle-txt{
+    padding:30px 4%;
+    &__p:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/*=======================
+Mind
+=======================*/
+.p-about-mind{
+  display: flex;
+  padding: 100px 0 80px;
+  &__left{
+    flex-basis: 32%;
+  }
+  &__right{
+    flex-basis: 68%;
+  }
+}
+@include mq('sp') {
+  .p-about-mind{
+    display: block;
+    padding: 60px 0;
+  }
+}
+
+// p-about-mind-txt
+.p-about-mind-txt{
+  padding-right: 2%;
+  max-width: 600px;
+  &__copy{
+    font-size:24px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    @include margin-bottom2_3(42px);
+  }
+}
+
+// p-about-mind-txt-blc
+.p-about-mind-txt-blc{
+  &__p{
+    margin-bottom:30px;
+    line-height: 2.0;
+    .--bold{
+      font-weight: bold;
+    }
+  }
+}
+
+/*=======================
+Skill
+=======================*/
+.p-about-skill{
+  background: $gray02;
+  padding: 60px 0;
+  &-heading{
+    text-align: center;
+    color:$blue02;
+    @include margin-bottom2_3(48px);
+  }
+}
+@include mq('sp') {
+  .p-about-skill{
+    padding: 40px 0;
+  }
+}
+.p-about-skill-set{
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Skillリスト
+.p-about-skill-list{
+  display: flex;
+  flex-wrap: wrap;
+  &__li{
+    display: inline-block;
+    margin:0 2% 30px;
+    max-width: 90px;
+    flex-basis: calc(88% * 1/6);
+  }
+}
+.p-about-skill-icon{
+  text-align: center;
+  &__img{
+    max-width: 48px;
+    display: inline-block;
+    img{
+      height: auto;
+    }
+  }
+  &__txt{
+    font-size: 12px;
+    color: #333333;
+  }
+}
+
+/*=======================
+contact
+=======================*/
