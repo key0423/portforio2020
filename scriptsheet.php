@@ -149,3 +149,18 @@ pagetop.click(function () {
 <script>
   objectFitImages('img.object_fit_img');
 </script>
+
+
+
+<?php if ( is_page('contact')) : ?>
+<script src="../js/jquery.autoKana.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(
+        function() {               
+            $.fn.autoKana('#user_name', '#user_name_kana', {
+                katakana : true  //true：カタカナ、false：ひらがな（デフォルト）
+        });
+    });
+</script>
+
+<?php endif; ?>

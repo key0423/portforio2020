@@ -9,23 +9,20 @@
    <div class="swiper-container-main">
     <div class="p-home-visual__list swiper-wrapper">
       <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/home/home_slider.jpg" alt="Keiko Kobayashi"></div>
-      <!-- <div class="swiper-slide"><img src="http://placekitten.com/1200/800"></div>
-      <div class="swiper-slide"><img src="http://placekitten.com/800/1200"></div>
-      <div class="swiper-slide"><img src="http://placekitten.com/1600/800"></div> -->
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div><!-- /.swiper-container -->
-  <div class="p-home-scroll_area">
+  <!-- <div class="p-home-scroll_area">
    <div class="p-home-scroll-btn">Scroll</div>
-  </div>
+  </div> -->
  </div>
 
 <div class="l-home-catch">
   <div class="p-home-catch-bg">
     <div class="p-home-catch l-container-lg">
      <p class="p-home-copy__txt01">Web Design</p>
-     <p class="p-home-copy__txt02">Webサイトはギフトと同じ。<br>ターゲットや目的に合わせた制作を行い、<br>お客様の価値をあげるお手伝いをします。</p>
+     <p class="p-home-copy__txt02">Webサイトで出会いをつなぐ。<br>ターゲットや目的に合わせた制作を行い、<br>お客様の価値をあげるお手伝いをします。</p>
     </div>
   </div>
 </div>
@@ -38,9 +35,7 @@
    </div>
    <div class="p-home-about__txt p-home-about-txt">
      <h2 class="p-home-heading --sp-none"><span class="c-heading--en">About</span><span class="c-heading--ja">私について</span></h2>
-    <p class="p-home-about-txt__txt">百貨店正社員から、Webデザイナーへ転職。<br>
-     お客様やチームメンバーへの共感と関わるを応援することを<br>
-     大切に制作を行っています。
+    <p class="p-home-about-txt__txt">私大文系を卒業後、新卒で百貨店に就職。25歳でWebデザイナーへ転職しました。<br>お客様やチームメンバーへの共感と応援を大切に制作を行っています。
     </p>
     <div class="c-link-btn">
       <a href="<?php echo home_url(); ?>/about/"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
@@ -54,7 +49,6 @@
     <div class="p-home-works--ttlbg">
       <h2 class="p-home-heading l-container-lg"><span class="c-heading--en">Works</span><span class="c-heading--ja">サイトの目的を考え、<br>丁寧に制作。</span></h2>
     </div>
-
     <div class="l-container-lg">
     <ul class="p-works-arc-list">
 
@@ -62,7 +56,7 @@
 <?php 
 $args = array(
   'post_type' => 'works',
-  'posts_per_page' => 4, // 表示件数の指定
+  'posts_per_page' => 5, // 表示件数の指定
 );
 $the_query = new WP_Query($args);
 
@@ -87,7 +81,7 @@ $txt_area = get_field('arc_txt', $id);
 <?php
   if ($terms = get_the_terms($post->ID, 'part')) {
     foreach ( $terms as $term ) {
-      echo ('<span>') ;
+      echo ('<span class="cat">') ;
       echo esc_html($term->name)  ;
       echo ('</span>') ;
     }
@@ -170,17 +164,6 @@ $txt_area = get_field('arc_txt', $id);
 
 <?php get_template_part("template-parts/contact_area"); ?>
 
-<aside class="l-bottom-bnr">
-  <div class="l-bottom-bnr-flex l-container-lg">
-    <div class="l-bottom-bnr-grid__item l-bottom-bnr-item">
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/common/blog_bnr.jpg" alt="ブログ・気ままに更新中">
-      </a>
-    </div><!-- /.l-bottom-bnr-grid__item.l-bottom-bnr-item01 -->
-    <div class="l-bottom-bnr-grid__item l-bottom-bnr-item">
-      <a href="//www.instagram.com/key_webdesigner/"><img src="<?php echo get_template_directory_uri(); ?>/img/common/insta_bnr.jpg" alt="Instagram　勉強の積み上げ">
-      </a>
-    </div><!-- /.l-bottom-bnr-grid__item.l-bottom-bnr-item02 -->
-  </div><!-- ./l-bottom-bnr-grid -->
-</aside><!-- /.l-bottom-banner -->
+<?php get_template_part("template-parts/bottom_bnr"); ?>
 
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <footer class="l-footer">
  <div class="l-footer-copyriht">©️ 2020 keiko kobayashi</div>
 </footer>
-<a href="#" class="pagetop"><img src="img/common/pagetop.svg" alt="PAGE TOP"></a>
+<!-- <a href="#" class="pagetop"><img src="img/common/pagetop.svg" alt="PAGE TOP"></a> -->
 
 
 

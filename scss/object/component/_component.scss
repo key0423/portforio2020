@@ -12,7 +12,66 @@
   }
 }
 
-// タイトル
+/*----------タイトル----------*/
+// 中ページタイトルページごとの指定
+// works-archive
+.p-works-arc-ttl-bg.c-page-ttl--bg{
+@include c-page-ttl-bg(url(../img/page_ttl/ttl_img_works.jpg));
+@include margin-bottom2_3(60px);
+  &::before{
+    display:inline-block;
+    content:'';
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(43, 108, 150, 0.7);
+  }
+}
+//contact
+.p-contact-ttl--bg.c-page-ttl--bg{
+@include c-page-ttl-bg(url(../img/about/about_img01.jpg));
+}
+
+// 中ページのタイトル共通
+.c-page-ttl{
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  .c-page--heading{
+    display: inline-block;
+    color: #ffffff;
+    text-align: right;
+    .c-page-heading--en{
+      display: block;
+      font-size: 64px;
+      font-family: $font-en01;
+      color: #fff;
+      letter-spacing: 0.2em;
+      line-height: 1.2;
+      position: relative;
+      &::before{
+        display:inline-block;
+        content:'';
+        background:#ffffff;
+        width: 800%;
+        height: 2px;
+        position: absolute;
+        left: calc(-700%);
+        bottom: 0;
+      }
+    }
+    .c-page-heading--ja{
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+  }
+}
+
 .c-heading--en{
   display: block;
   font-size:62px;

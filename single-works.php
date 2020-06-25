@@ -18,7 +18,8 @@ $txt_area = get_field('txt_area');
     </div>
     <dl class="p-works-sgl-info l-container-lg">
     <dt class="p-works-sgl-info__ttl">URL</dt>
-      <dd class="p-works-sgl-info__txt"><a href="<?php echo $url ?>" class="works-sgl-info__txt--link"><?php echo $url ?></a></dd>
+      <!-- <dd class="p-works-sgl-info__txt"><a href="<?php echo $url ?>" class="works-sgl-info__txt--link"><?php echo $url ?></a></dd> -->
+      <dd class="p-works-sgl-info__txt"><?php echo $url ?></dd>
       <dt class="p-works-sgl-info__ttl">制作担当</dt>
       <dd class="p-works-sgl-info__txt"><?php echo $position ?></dd>
       <dt class="p-works-sgl-info__ttl">制作期間</dt>

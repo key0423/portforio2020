@@ -8,16 +8,16 @@ $font-en03: 'Caveat', cursive;
 $blue01:#829CAD;
 $blue02:#60A6D3;
 $blue03:#B8BEC6;
+$blue04:#CFDEE8;
 $gray01:#838383;
 $gray02:#eeeeee;
 $gray03:#B5C1C4;
 $sp:767px;
 $pc:1180px;
 
-
-
 // レイアウト幅
 $layout-width-inner: 1180px;
+
 // ブレークポイント
 $breakpoints: (
   "sp-s": "screen and (max-width: 400px)",  
@@ -25,6 +25,7 @@ $breakpoints: (
   "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
   "pc": "screen and (min-width: #{$layout-width-inner})",
 );
+
 // メディアクエリー
 @mixin mq($breakpoint: sp) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -96,3 +97,12 @@ $breakpoints: (
   }
 }
 
+// 中ページタイトル
+@mixin c-page-ttl-bg($background){
+  padding: 80px 2%;
+  background:$background;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
