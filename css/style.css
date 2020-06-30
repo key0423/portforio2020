@@ -654,26 +654,32 @@ div.wpcf7-mail-sent-ok {
 }
 
 /*----------_l-header----------*/
-.l-header.none {
-  display: none;
+.l-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.l-header .p-header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   border-bottom: solid 1px #ccc;
 }
 
-.l-header.none .l-header-logo {
+.l-header .p-header .l-header-logo {
   max-width: 220px;
   margin-left: 2%;
 }
 
-.l-header.none .l-header-logo a {
+.l-header .p-header .l-header-logo a {
   width: 100%;
   padding: 10px;
   display: block;
 }
 
-.l-header.none-nav {
+.l-header .p-header-nav {
   display: inline-block;
   margin-left: auto;
 }
@@ -710,15 +716,16 @@ div.wpcf7-mail-sent-ok {
   border-right: none;
 }
 
-.l-header.show {
-  display: flex;
-  position: sticky;
-  position: -webkit-sticky;
-  /*Safari*/
+.l-header.sticky {
+  width: 100%;
+  position: fixed;
   top: 0;
+  z-index: 5000;
+}
+
+.l-header.sticky .p-header {
   background: rgba(255, 255, 255, 0.6);
   border-bottom: solid 1px #eee;
-  z-index: 5000;
 }
 
 .l-flex-box {
@@ -770,8 +777,8 @@ object
 .c-link-btn a .c-link-btn__arrow::after {
   width: 16px;
   height: 1px;
-  top: -7px;
-  right: 0;
+  top: -8px;
+  right: -1px;
   transform: rotate(45deg);
 }
 
@@ -1396,6 +1403,13 @@ contact
 
 .wpcf7-submit:hover {
   box-shadow: 0 3px 8px #cccccc;
+}
+
+/*==================== p-contact-thanks ====================*/
+.contact-thanks .c-link-btn {
+  max-width: 230px;
+  margin: 0 auto;
+  border: solid 1px #60A6D3;
 }
 
 /*----------_p-home----------*/
@@ -2218,6 +2232,13 @@ contact
 }
 
 /*==========item内テキスト==========*/
+.p-works-arc-list-item .p-works-list-item-txt__cat {
+  display: inline-block;
+  background: #CFDEE8;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
 .p-works-arc-list-item .p-works-list-item-txt__ttl {
   display: block;
   font-size: 18px;

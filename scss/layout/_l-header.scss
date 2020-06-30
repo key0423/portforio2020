@@ -1,22 +1,27 @@
 /*----------_l-header----------*/
-.l-header.none{
-  display: none;
-  align-items: center;
-  justify-content: space-between;
+.l-header{
   width: 100%;
-  border-bottom: solid 1px #ccc;
-  .l-header-logo{
-    max-width: 220px;
-    margin-left: 2%;
-    a{
-      width: 100%;
-      padding:10px;
-      display: block; 
+  position: absolute;
+  top: 0;
+  .p-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+    .l-header-logo{
+      max-width: 220px;
+      margin-left: 2%;
+      a{
+        width: 100%;
+        padding:10px;
+        display: block; 
+      }
     }
-  }
-  &-nav{
-    display: inline-block;
-    margin-left: auto;
+    &-nav{
+      display: inline-block;
+      margin-left: auto;
+    }
   }
 }
 
@@ -29,7 +34,7 @@
     a:hover{
       color: $blue01;
     }
-  }
+  } 
 }
 
 .l-header-nav__item--contact,
@@ -50,14 +55,15 @@
   }
 }
 // スクロール後表示
-.l-header.show{
-  display: flex;
-  position: sticky;
-  position: -webkit-sticky;/*Safari*/
+.l-header.sticky{
+  width: 100%;
+  position: fixed;
   top: 0;
-  background:rgba(255,255,255,0.6);
-  border-bottom: solid 1px #eee;
   z-index: 5000;
+  .p-header{
+    background:rgba(255,255,255,0.6);
+    border-bottom: solid 1px #eee;
+  }
 }
 
 // flex

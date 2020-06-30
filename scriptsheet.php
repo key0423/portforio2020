@@ -92,24 +92,24 @@ jQuery(function($) {
 
 
 <script>
-/*==================== 文字数制御 ====================*/
+/*==================== sticky header ====================*/
 $(function(){
-  $(window).on('scroll',function(){
-    var scroll_top = $(window).scrollTop();
     $('.l-header').each(function(){
-      // 要素のドキュメント上の位置を取得
-      var offset_top = $(this).offset().top,
-          top_margin = 80 ; // 画面上端からのマージン
-      // スクロール量と要素の位置からマージンを引いた値を比較
-      if( scroll_top > offset_top - top_margin ){
-        // スクロール量が所定の位置を越えた時にfadeinクラスを付与
-          $(this).addClass('show');       
-      }else{
-        // スクロール量が所定の位置を越えていない場合はfadeinクラスを外す
-          $(this).removeClass('show');       
-      }
+        var $window = $(window),
+            $header = $(this),
+            headerOffsetTop = $header.offset().top;
+
+        $window.on('scroll',function(){
+            if($window.scrollTop() > headerOffsetTop){
+                $header.addClass('sticky');
+            } else{
+                $header.removeClass('sticky');
+            }
+        });
+
+        $window.trigger('scroll');
     });
-  });
+
 });
 </script>
 <script>

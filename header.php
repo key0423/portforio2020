@@ -24,25 +24,28 @@
 </head>
 
 <body>
-<header class="l-header none">
+<header class="l-header">
 
-<?php if ( is_home() || is_front_page() ) : ?>
-<h1 class="l-header-logo"><a href="/">
-<img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></h1>
-<?php else : ?>
-<p class="l-header-logo"><a href="/">
-<img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></p>
-<?php endif; ?>
+<div class="p-header">
+    <?php if ( is_home() || is_front_page() ) : ?>
+    <h1 class="l-header-logo"><a href="/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></h1>
+    <?php else : ?>
+    <p class="l-header-logo"><a href="/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/common/header_logo.svg" alt="Keiko Kobayashi"></a></p>
+    <?php endif; ?>
+    
+    <nav class="l-header-nav --sp-none">
+     <ul class="l-header-nav-menu l-flex-box">
+      <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/">Top</a></li>  
+      <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/about/">About</a></li>
+      <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/works/">Works</a></li>
+      <li class="l-header-nav-menu__item l-header-nav__item--contact"><a href="<?php echo home_url(); ?>/contact"><i class="fas fa-envelope"></i></a></li>
+      <li class="l-header-nav-menu__item l-header-nav__item--sns"><a href="//www.instagram.com/key_webdesigner/"><i class="fab fa-instagram"></i></a></li>
+     </ul>
+    </nav>
+</div>
 
-<nav class="l-header-nav --sp-none">
- <ul class="l-header-nav-menu l-flex-box">
-  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/">Top</a></li>  
-  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/about/">About</a></li>
-  <li class="l-header-nav-menu__item"><a href="<?php echo home_url(); ?>/works/">Works</a></li>
-  <li class="l-header-nav-menu__item l-header-nav__item--contact"><a href="<?php echo home_url(); ?>/contact"><i class="fas fa-envelope"></i></a></li>
-  <li class="l-header-nav-menu__item l-header-nav__item--sns"><a href="//www.instagram.com/key_webdesigner/"><i class="fab fa-instagram"></i></a></li>
- </ul>
-</nav>
 </header>
 
 <?php if ( !is_home() || !is_front_page() ) : ?>

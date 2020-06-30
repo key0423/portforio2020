@@ -15,7 +15,7 @@
 <?php } ?>
 
 
-<?php if(is_page('contact')){ ?>
+<?php if(is_page(array('contact','contact-thanks'))){ ?>
 <div class="p-contact-ttl--bg c-page-ttl--bg">
   <div class="c-page-ttl">
     <h1 class="c-page--heading"><span class="c-page-heading--en">Contact</span><span class="c-page-heading--ja">お問い合わせ</span></h1>
