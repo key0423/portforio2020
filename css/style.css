@@ -644,6 +644,7 @@ layout
 }
 
 .l-header-nav-menu__item {
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   padding: 0 12px;
   letter-spacing: 0.05em;
@@ -1021,7 +1022,9 @@ object
   padding: 10px 0;
   letter-spacing: 0.1em;
   border-bottom: solid 2px #fff;
-  height: 30px;
+  height: 52px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .p-home-works-swiper .swiper-slide__wrap .swiper-slide-box__txt {
@@ -1082,7 +1085,7 @@ object
 
 .p-home-works .c-link-btn {
   max-width: 240px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .p-home-works .c-link-btn a {
@@ -1152,6 +1155,16 @@ object
 }
 
 /*==========Methods==========*/
+.p-home-methods {
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-methods {
+    margin-bottom: calc(90px * 2/3);
+  }
+}
+
 .p-home-methods__left {
   flex-basis: 50%;
   background: url(../img/home/home_img03.jpg) no-repeat;
@@ -1216,6 +1229,7 @@ object
 
 .p-home-methods-ttl .p-home-heading {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .p-home-methods-ttl .p-home-heading .c-heading--en {
@@ -1323,6 +1337,22 @@ object
   }
 }
 
+/*==========　instagram　==========*/
+.p-home-insta {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-home-insta {
+    margin-bottom: calc(30px * 2/3);
+  }
+}
+
+.p-home-insta .iswg-images-item {
+  width: 24% !important;
+}
+
+/*==========　contact　==========*/
 .p-home-contact--bg {
   background: url(../img/home/home_img05.jpg);
   background-size: cover;
