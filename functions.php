@@ -9,13 +9,8 @@ return $slug;
 add_filter( 'wp_unique_post_slug', 'auto_post_slug', 10, 4 );
 */
 
-
-
-
 // add_theme_support('post-thumbnails');//アイキャッチを有効にする
 // get_post_meta($post->ID, 'img_url', true)
-
-
 
 
 /* 【出力カスタマイズ】メインクエリーをカスタマイズ */
@@ -27,6 +22,24 @@ function foo_modify_main_queries ( $query ) {
     }
   }
 }
+
+add_action( 'wp_footer', 'add_thanks_page' );
+ 
+function add_thanks_page() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'https://www.k-laurel.net/contact-thanks/'; /*送信完了ページのURL*/
+}, false );
+</script>
+<?php
+}
+
+/* 【リキャプチャ削除 */
+add_action( 'wp_enqueue_scripts', function() {
+	if(is_page('contact')) return;
+    wp_deregister_script( 'google-recaptcha' );
+});
 
 
 ?>

@@ -64,13 +64,59 @@
   }
 }
 
+@include mq('tab') {
+  .p-home-visual{
+    &-txt{
+      .p-home-name{
+        left: 2%;
+        font-size: 64px;
+        transform: translate(0,-50%);
+      }
+    }
+    .swiper-slide {
+      height: 76vh;
+      &::before{
+        height: 76vh;
+      }
+    }
+  }
+}
+
+@include mq('sp') {
+  .p-home-visual{
+    overflow: hidden;
+    &-txt{
+      .p-home-name{
+        left:2%;
+        font-size: 42px;
+        &--small{
+          font-size: 18px;
+        }
+      }
+    }
+    .swiper-slide {
+      height: 60vh;
+      &::before{
+        height: 60vh;
+      }
+    }
+    .swiper-slide > img {
+        object-fit: cover; /* IE: not support */
+        width: 100%;
+        height: 100%;
+    }
+  }
+}
+
+
+
 /*========== about ==========*/
 .p-home-about{
   display: flex;
   @include padding-bottom2_3(80px);
   &__img{
     max-width:336px;
-    margin-right:2%;
+    margin-right:4%;
   }
   &__txt{
     flex-basis: calc(100%-336px);
@@ -98,6 +144,7 @@
     overflow: hidden;
     &__img{
       max-width:300px;
+      margin-left: auto;
       margin-right:auto;
       position: relative;
       margin-bottom:40px;
@@ -129,8 +176,8 @@
 .p-home-works--ttlbg{
   width: 100%;
   position: relative;
-  &:before{
-    display:inline-block;
+  .p-home-works-ttlbg__line{
+    display:block;
     content:'';
     background:$blue03;
     width:100%;
@@ -311,10 +358,34 @@
     letter-spacing: 0.2em;
   }
 }
+
+@include mq('sp') {
+.l-home-catch{
+  .p-home-catch-bg{
+    .p-home-catch{
+      background: url(../img/home/home_img02.png) no-repeat right 10% bottom 10%;
+      background-size: 20%;
+    }
+  }
+  .p-home-copy__txt01{
+    left: 10%;
+    top: 40px;
+  }
+  .p-home-copy__txt02{
+    font-size: 18px;
+  }
+}
+}
+
 @include mq('sp-s') {
 .l-home-catch{
+  background-size:15% 15%;
+  .p-home-copy__txt01{
+    left: 6%;
+    font-size:24px;
+  }
   .p-home-copy__txt02{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 }
@@ -361,6 +432,7 @@
       position:absolute;
       top:0;
       left:0;
+      z-index: -1;
     } 
     &__left{
       background:none;
@@ -417,6 +489,9 @@
     margin-right: auto;
     display: block;
     text-align: center;
+    .p-home-heading{
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -446,12 +521,13 @@
 @include mq('sp') {
   .p-home-skill-list__item{
     padding: 20px 1%;
+    align-items: center;
     &:not(:last-child){
       border-bottom: solid 1px #fefefe;
     } 
     .p-home-skill__icon{
       margin-left: 1%;
-      margin-right: 1%;
+      margin-right: 3%;
     }
     .p-home-skill__txt{
       flex-basis:74%;
@@ -478,8 +554,8 @@
     background: #fefefe;
     border-radius: 50%;
     &__img{
-      max-width: 50px;
-      margin: 0 auto 10px;
+      max-width: 38px;
+      margin: 14px auto 5px;
     }
     &__txt{
       font-size: 16px;

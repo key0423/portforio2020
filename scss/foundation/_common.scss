@@ -18,11 +18,12 @@ body{
   word-wrap: break-word;
   vertical-align: baseline;
   white-space: normal;
-  padding: 0;
   border: 0;
   outline: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding:70px 0 0;
+  position:relative;
 }
 @include mq('sp') {
   body{
@@ -80,4 +81,27 @@ img{
 .object_fit_img{
   object-fit: cover;
   font-family: 'object-fit: cover;'
+}
+
+
+/*=======================
+セクションごとのタイトル
+=======================*/
+.c-section-ttl{
+  position: relative;
+  line-height: 1.4;
+  padding:0.25em 2em;
+  display: inline-block;
+  @include sec_ttl;
+  .c-heading--en {
+    font-size: 40px;
+  }
+  .c-heading--ja {
+    font-size: 16px;
+  } 
+}
+
+
+.grecaptcha-badge{
+  visibility: hidden;
 }

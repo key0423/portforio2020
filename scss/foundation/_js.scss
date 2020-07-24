@@ -1,0 +1,76 @@
+/*===============================
+inview
+===============================*/
+.js-fadein {
+  opacity : 0;
+  transition : all 1s;
+}
+ 
+.js-fadein.fadein{
+  opacity : 1;
+}
+
+/*===============================
+pagetop
+===============================*/
+// .js-pagetop{
+//   opacity:0;
+//   transition : all 1s;
+// }
+// .js-pagetop.js-top-btn{
+//   opacity:1;
+// }
+
+/*トップへ戻るボタン*/
+.js-pagetop{
+  position:fixed; /*固定*/
+  bottom:20px; /*場所を右下に移動*/
+  right:20px; /*場所を右下に移動*/
+  display:block; /*aタグをblock要素に変更*/
+  background-color:rgba(0,0,0,0.5); /*以下、デザインはご自由に！！*/
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:11px;
+  width:60px;
+  height:60px;
+  text-align:center;
+  line-height:22px;
+  border-radius:30px;
+  padding-top:30px;
+  box-sizing:border-box;
+  z-index: 500;
+  &::before {
+  content:'';
+  display: inline-block;
+  position:absolute;
+  top:10px;
+  left:50%;
+  width:2px;
+  height: 36px;
+  background: #ffffff;
+  text-align:center;
+}
+&::after{
+  display:inline-block;
+  content: '';
+  width: 2px;
+  height: 16px;
+  background: #ffffff;
+  position: absolute;
+  top: calc(50% - 19px);
+  left: calc(50% - 5px);
+  transform: rotate(30deg);
+}
+&:hover {
+  opacity:0.7;
+}
+}
+
+// .js-slide-left{
+//   opacity: 0;
+// }
+// .js-slide-left.slideInLeft{
+//   transition: all 0.5s ease-in;
+//   opacity: 1;
+// }
