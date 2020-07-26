@@ -175,39 +175,24 @@ $(function(){
 </script>
 
 
-<!-- =================== スクロールトップ =======================-->
-<!-- <script>
+<!-- ===================ハンバーガーメニュー====================-->
+<script>
 $(function(){
-  $(window).on("scroll", function(){
-    //スクｋロールで表示
-    if($(this).scrollTop() > 400){
-      $('.js-pagetop').addClass("js-top-btn");
-    }
-    scrollHeight = $(document).height();
-    //$(window).scrollTop();スクロール位置取得
-    scrollPosition = $(window).height() + $(window).scrollTop();
-    footHeight = $("footer").innerHeight();
-    if(scrollHeight - scrollPosition <= footHeight){
-      $('.js-pagetop').css({
-        "position":"absolute",
-        "bottom": footHeight + 0
-      });
+  $('#js-hamburger').click(function(){
+    // トグル制御
+    //headerにクラスをつけて親を制御
+    $('.p-header').toggleClass('js-hamburger-open');
+    if($(this).hasClass("js-hamburger-block")){
+      $(this).removeClass("js-hamburger-block");
     }else{
-      $('.js-pagetop').css({
-        "position":"fixed",
-        "bottom": "20px"
-      });
+      $(this).addClass("js-hamburger-block");
     }
-  });
-  $('.js-pagetop').click(function(){
-        $('body,html').animate({
-        scrollTop: 0
-        }, 400);
-        return false;
-    });
-});
-</script> -->
 
+    $('.js-sp-hamburger').toggleClass('fadein');
+
+  });
+});
+</script>
 <!-- =================== スクロールトップ =======================-->
 <script>
   const pageTopBtn = $(".js-pagetop");

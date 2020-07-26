@@ -14,7 +14,7 @@
       margin-left: 2%;
       a{
         width: 100%;
-        padding:10px;
+        padding: 10px;
         display: block; 
       }
     }
@@ -25,17 +25,59 @@
   }
 }
 
+@include mq('sp') {
+  .l-header{
+    .p-header{
+      display: block;
+      align-items: center;
+      width: 100%;
+      border-bottom: solid 1px #ccc;
+      .l-header-logo{
+        max-width: 180px;
+        a{
+          width: 100%;
+          padding: 10px;
+          display: block; 
+        }
+      }
+    }
+  }
+}
+
 .l-header-nav-menu{
   align-items: center;
     &__item{
     font-size: 14px;
-    padding:0 12px;
+    padding: 0 12px;
     letter-spacing: 0.05em;
     a:hover{
       color: $blue01;
     }
   } 
 }
+@include mq('sp') {
+.l-header-nav-menu.l-flex-box{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+}
+
+@include mq('sp') {
+  .l-header-nav-menu{
+    &__item{
+    margin-bottom: 20px;
+    text-align: center;
+    a:hover{
+      color: #333333;
+      background: transparent;
+    }
+  } 
+}
+}
+
 
 .l-header-nav__item--contact,
 .l-header-nav__item--sns{
@@ -54,14 +96,29 @@
     }
   }
 }
+
+@include mq('sp') {
+.l-header-nav__item--contact,
+.l-header-nav__item--sns{
+  a{
+    display: inline;
+    &:hover{
+      background:transparent;
+      color: #333333;
+    }
+  }
+}
+}
+
+
 // スクロール後表示
 .l-header.sticky{
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 5000;
+  z-index: 5100;
   .p-header{
-    background:rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
     border-bottom: solid 1px #eee;
   }
 }
