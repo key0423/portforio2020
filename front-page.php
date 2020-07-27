@@ -132,6 +132,4 @@ $txt_area = get_field('arc_txt', $id);
 
 <?php get_template_part("template-parts/contact_area"); ?>
 
-<?php get_template_part("template-parts/bottom_bnr"); ?>
-
 <?php get_footer(); ?>

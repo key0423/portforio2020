@@ -9,17 +9,11 @@
       </ul>
     </div><!-- /.p-contact-form-txt -->
     <div class="p-contact-form__bottom p-contact-form-blc">
-      <!-- contactform7ローカル -->
-      <?php //echo do_shortcode( '[contact-form-7 id="52" title="お問い合わせ"]' ); ?>
       <!-- contactform7 -->
       <?php echo do_shortcode( '[contact-form-7 id="57" title="お問い合わせ"]' ); ?>
-
-
     </div><!-- /.p-contact-form-blc -->
   </section><!-- /.p-contact-form -->
 </div>
 </main>
-
-<?php //get_template_part("template-parts/bottom_bnr"); ?>
 
 <?php get_footer(); ?>

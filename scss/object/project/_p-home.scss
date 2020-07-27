@@ -545,8 +545,7 @@
   &__txt{
     text-align: center;
     font-family: $font-en02;
-    font-size: 22px;
-    letter-spacing: 0.1em;
+    font-size: 20px;
   }
 } 
 @include mq('sp') {
@@ -620,7 +619,6 @@
   &__txt{
     text-align: center;
     margin:42px 1%;
-    font-size: 18px;
     line-height: 1.8;
     letter-spacing: 0.1em;
   }
@@ -634,4 +632,15 @@
       }
     }
   }
+}
+
+@include mq('sp-s') {
+.p-home-contact{
+  &__txt{
+    text-align: center;
+    margin:42px 1%;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
 }

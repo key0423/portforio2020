@@ -13,9 +13,9 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 <meta name="robots" content="noindex" />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <?php get_template_part("template-parts/metatag"); ?>
-<link rel="stylesheet" href="//unpkg.com/swiper/css/swiper.min.css">
+<!-- <link rel="stylesheet" href="//unpkg.com/swiper/css/swiper.min.css"> -->
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css">
 <link href="//fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Damion&display=swap" rel="stylesheet">
 <link href="//fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">

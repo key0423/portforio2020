@@ -1,54 +1,24 @@
-<script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <!-- //スライダーswiper-js -->
-<script src="//unpkg.com/swiper/js/swiper.min.js"></script>
+<!-- <script src="//unpkg.com/swiper/js/swiper.min.js"></script> -->
 <script>
-  let mySwiper = new Swiper ('.swiper-container-main', {
+  // let mySwiper = new Swiper ('.swiper-container-main', {
     // オプションの設定
     // navigation: {
     // nextEl: '.swiper-button-next',
     // prevEl: '.swiper-button-prev',
     // },
-    slidesPerView: 1,
-    spaceBetween: 0,
+    // slidesPerView: 1,
+    // spaceBetween: 0,
     // autoplay: {
     //   delay:5000,
     // },
-    loop: true,
-    speed: 5000,
-    centeredSlides : true,
-    slideToClickedSlide: true,
-  });
+  //   loop: true,
+  //   speed: 5000,
+  //   centeredSlides : true,
+  //   slideToClickedSlide: true,
+  // });
+  // 
   </script>
-
-<script>
-  var swiper = new Swiper('.p-home-works-swiper', {
-    pagination: {
-		el: '.swiper-pagination',
-		type: 'custom',
-		renderCustom: function (swiper, current, total) {
-			// if (swiper.isBeginning) {
-				return '<span class="">' + " " + '</span>';
-				//2枚目
-				return '<span>' + "<?php the_title(); ?>" + '</span>';
-				return '<span>' + "<?php the_title(); ?>" + '</span>';
-				return '<span>' + "<?php the_title(); ?>" + '</span>';
-			}
-		}
-	},
-
-    slidesPerView: 1,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    loop: true, //ループさせる
-    centeredSlides:true,
-    effect: "fade", //フェードのエフェクト
-     autoplay: {
-     delay: 5000, //４秒後に次の画像へ
-     disableOnInteraction: false, //ユーザー操作後に自動再生を再開する
-     reverseDirection: false
-     },
-  });
-</script>
 
 
 <script>
@@ -138,25 +108,12 @@ pagetop.click(function () {
 
 
 <!-- =================== 画像フィット =======================-->
-<script src="<?php echo get_template_directory_uri(); ?>/js/ofi.min.js"></script>
+<script src="<?php //echo get_template_directory_uri(); ?>/js/ofi.min.js"></script>
 <script>
   objectFitImages('img.object_fit_img');
 </script>
 
 
-<!-- =================== スクロールで表示 =======================-->
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.inview.min.js"></script>
-<script>
-$(function(){
-  $('.js-slide-left').css('width':'0');
-  $('.js-slide-left').on('inview', function(){
-    $(this).animate({
-      width:'100%'
-    },duration,'easeOutQuad'
-    );
-  });
-});
-</script>
 
 <!-- =================== fadein 表示 =======================-->
 <script>
@@ -178,21 +135,23 @@ $(function(){
 <!-- ===================ハンバーガーメニュー====================-->
 <script>
 $(function(){
+  $('.js-sp-hamburger').hide();
   $('#js-hamburger').click(function(){
     // トグル制御
     //headerにクラスをつけて親を制御
     $('.p-header').toggleClass('js-hamburger-open');
     if($(this).hasClass("js-hamburger-block")){
       $(this).removeClass("js-hamburger-block");
+      $('.js-sp-hamburger').fadeOut().css('z-index', '-1');
     }else{
       $(this).addClass("js-hamburger-block");
+      $('.js-sp-hamburger').fadeIn("5000").css('z-index', '5200');
     }
-
-    $('.js-sp-hamburger').toggleClass('fadein');
-
   });
 });
 </script>
+
+
 <!-- =================== スクロールトップ =======================-->
 <script>
   const pageTopBtn = $(".js-pagetop");
@@ -201,14 +160,14 @@ $(function(){
   $(function(){
     $(window).on("scroll", function(){
 
-      if ($(this).scrollTop() > 300) {
+      if ($(this).scrollTop() > 50) {
         pageTopBtn.fadeIn("50");
       } else { 
         pageTopBtn.fadeOut("50");
       }
 
       // フッターの高さを取得
-      bodyHeight = $(document).height(); // bodyの高さを取得
+      bodyHeight = $(document).height(); 
       scrollBottomPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置の画面下部の高さを取得
       footerHeight = $("footer").innerHeight(); // フッター要素の高さを取得
       
@@ -232,4 +191,21 @@ $(function(){
       return false;
     });
   });
+</script>
+
+
+<!-- =================== スクロールで表示 =======================-->
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.inview.min.js"></script>
+<script>
+$(function(){
+  $('.js-slide-left').css('width', '0');
+
+  $('.js-slide-left').on('inview', function(){
+    $(this).animate({
+      width:'100%'
+    },duration,'easeOutQuad'
+    );
+  });
+  
+});
 </script>

@@ -62,30 +62,30 @@ pagetop
 /*===============================
 ハンバーガーメニュー
 ===============================*/
+.p-hamburger{
+  display: none;  
+}
+
+@include mq('sp') {
 .p-hamburger {
-  // position: relative;
   display: inline-block;
   text-decoration: none;
   appearance: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.p-hamburger {
   position: absolute;
   z-index: 5300;
   right: 2%;
   top: 10px;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   margin: auto;
   border-radius: 50%;
-  border: 1px solid #f9d8ae;
+  border: 1px solid #CFDEE8;
   box-shadow: 0 0 2rem transparent;
   outline: none;
-  -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 .p-hamburger:hover,
 .p-hamburger:focus {
@@ -101,7 +101,7 @@ pagetop
   margin: auto;
   width: 18px;
   height: 2px;
-  background-color: #f9d8ae;
+  background-color: #CFDEE8;
   transition: inherit;
 }
 .p-hamburger__btn::before,
@@ -123,8 +123,6 @@ pagetop
 }
 
 
-
-
 .js-hamburger-block .p-hamburger__btn {
   background-color: transparent;
 }
@@ -132,7 +130,7 @@ pagetop
 .js-hamburger-block .p-hamburger__btn::before,
 .js-hamburger-block .p-hamburger__btn::after {
   top: 0;
-  background-color: #f9d8ae;
+  background-color: #CFDEE8;
 }
 
 .js-hamburger-block .p-hamburger__btn::before {
@@ -159,6 +157,7 @@ pagetop
   clip-path: inset(50%); 
   margin: -1px;
 }
+}
 
 
 /*===============================
@@ -171,10 +170,8 @@ pagetop
   background: rgba(250,250,250,0.9);
   position: fixed;
   top: 0;
-  opacity: 0;
+  animation-duration: 0.5s;
   transition: 0.5s;
-}
-.js-sp-hamburger.fadein{
-  opacity:1.0;
+  z-index: -1;
 }
 }

@@ -23,7 +23,7 @@ body{
   overflow-x: hidden;
   overflow-y: scroll;
   padding:70px 0 0;
-  position:relative;
+  // position:relative;
 }
 @include mq('sp') {
   body{
@@ -83,6 +83,60 @@ img{
   font-family: 'object-fit: cover;'
 }
 
+
+
+
+/*=======================
+ページごとのタイトル
+=======================*/
+.c-page-ttl {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    .c-page--heading {
+      display: inline-block;
+      color: #ffffff;
+      text-align: right;
+      .c-page-heading--en {
+          display: block;
+          font-size: 64px;
+          font-family: "Crimson Text", serif;
+          color: #fff;
+          letter-spacing: 0.2em;
+          line-height: 1.2;
+          position: relative;
+          &::before {
+            display: inline-block;
+            content: '';
+            background: #ffffff;
+            width: 800%;
+            height: 2px;
+            position: absolute;
+            left: calc(-700%);
+            bottom: 0;
+        }
+      }
+      .c-page-heading--ja {
+        display: block;
+        font-size: 18px;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        line-height: 1.4;
+    }
+  }
+}
+@include mq('sp') {
+  .c-page-ttl {
+    .c-page--heading {
+      .c-page-heading--en {
+        font-size: 52px;
+      }
+      .c-page-heading--ja {
+        font-size: 18px;
+    }
+  }
+}
+}
 
 /*=======================
 セクションごとのタイトル

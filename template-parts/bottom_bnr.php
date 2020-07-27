@@ -8,6 +8,6 @@
     <div class="l-bottom-bnr-grid__item l-bottom-bnr-item">
       <a href="//www.instagram.com/key_webdesigner/"><img src="<?php echo get_template_directory_uri(); ?>/img/common/insta_bnr.jpg" alt="Instagram　勉強の積み上げ">
       </a>
-    </div><!-- /.l-bottom-bnr-grid__item.l-bottom-bnr-item02 -->
+    </div>
   </div><!-- ./l-bottom-bnr-grid -->
 </aside><!-- /.l-bottom-banner -->
