@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-<!-- Google Tag Manager -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-<!-- End Google Tag Manager -->
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +8,7 @@
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 <meta name="robots" content="noindex" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
 <?php get_template_part("template-parts/metatag"); ?>
 <!-- <link rel="stylesheet" href="//unpkg.com/swiper/css/swiper.min.css"> -->
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -26,7 +21,6 @@
 
 <body>
 <header class="l-header">
-
 <div class="p-header">
   <?php if ( is_home() || is_front_page() ) : ?>
   <h1 class="l-header-logo"><a href="/">

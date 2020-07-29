@@ -108,11 +108,10 @@ pagetop.click(function () {
 
 
 <!-- =================== 画像フィット =======================-->
-<script src="<?php //echo get_template_directory_uri(); ?>/js/ofi.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/ofi.min.js"></script>
 <script>
   objectFitImages('img.object_fit_img');
 </script>
-
 
 
 <!-- =================== fadein 表示 =======================-->
@@ -135,7 +134,6 @@ $(function(){
 <!-- ===================ハンバーガーメニュー====================-->
 <script>
 $(function(){
-  $('.js-sp-hamburger').hide();
   $('#js-hamburger').click(function(){
     // トグル制御
     //headerにクラスをつけて親を制御
@@ -198,12 +196,18 @@ $(function(){
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.inview.min.js"></script>
 <script>
 $(function(){
-  $('.js-slide-left').css('width', '0');
+  $('.js-slide-left').css({
+    opacity: 0,
+    transform:"translateX(-100%)",
 
+  }
+  );
   $('.js-slide-left').on('inview', function(){
-    $(this).animate({
-      width:'100%'
-    },duration,'easeOutQuad'
+    $(this).css({
+      opacity:1,
+      transition: "all 0.5s ease-in",
+      transform: "translateX(100%)"
+    }
     );
   });
   

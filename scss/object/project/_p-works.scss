@@ -1,6 +1,8 @@
+
 .main.works-ark{
   margin-bottom: 80px;
 }
+
 /*==================== p-works-archive ====================*/
 .p-works-arc-list{
   display: flex;
@@ -28,7 +30,7 @@
   &__item:nth-child(5n-3){
     flex-basis: 48%;
     max-width: 560px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   &__item:nth-child(5n-4){
     margin-right:4%; 
@@ -42,9 +44,15 @@
     &__item{
       margin: 0 auto 48px;
     }
+    // 2つ並び
+    &__item:nth-child(5n-4),
+    &__item:nth-child(5n-3){
+      margin-bottom: 48px;
+    }
     &__item:nth-child(5n-2),
     &__item:nth-child(5n-1){    
       margin-right: auto;
+      margin: 0 auto 48px;
     }
     &__item:nth-child(5n-4){
       margin-right:auto; 
@@ -62,7 +70,7 @@
     border: solid 1px #ccc;
     img{
       width: 100%;
-      height: 200px;
+      height: 280px;
     }
   }
 }
@@ -88,7 +96,7 @@
       width: 100%;
       img{
         width: 100%;
-        height: 220px;
+        height: 280px;
       }
     }
   }  
@@ -99,7 +107,7 @@
       width: 100%;
       img{
         width: 100%;
-        height: 220px;
+        height: 280px;
       }
     }
   } 
@@ -115,13 +123,11 @@
       font-size: 14px;
       padding: 4px 8px;
       text-align: center;
-      margin: 8px 10px 0 0;
+      margin: 12px 10px 0 0;
     }
     &__cat{
-      display: inline-block;
-      background:$blue04;
-      font-size: 14px;
-      padding: 4px 8px;
+      @include c-works-item-cat;
+    
     }
     &__ttl{
       display: block;
@@ -129,9 +135,9 @@
       font-weight: bold;
       line-height: 1.4;
       letter-spacing: 0.1em;
-      height: 34px;
+      height: 42px;
       overflow: hidden;
-      padding: 6px 0 0;
+      padding: 10px 0 0;
       margin-bottom: 6px;
     }
     &__txt{
@@ -164,7 +170,7 @@
       padding: 10px 0 0;
       letter-spacing: 0.1em;
       border-bottom: solid 2px #fff;
-      height: 54px;
+      height: 52px;
       overflow: hidden;
       margin-bottom: 10px;
     }
@@ -177,6 +183,14 @@
   }
 }
 @include mq('sp') {
+// 1.2.6.7個以外
+.p-works-arc-list-item{
+  .p-works-list-item-txt{
+    &__ttl{
+      height: 38px;
+    }
+  } 
+}
   // 1.2.6.7個
 .p-works-arc-list-item:nth-child(5n-4),
 .p-works-arc-list-item:nth-child(5n-3){
@@ -188,7 +202,7 @@
       line-height: 1.4;
       padding: 6px 0 0;
       letter-spacing: 0.1em;
-      height: 34px;
+      height: 38px;
       overflow: hidden;
     }
     &__txt{
@@ -212,14 +226,36 @@
     letter-spacing: 0.1em;
     line-height: 1.4;
     padding-bottom: 4px;
-  }
-  .p-works-ttl__cat{
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    color: $gray01;
-    padding-bottom: 10px;
     border-bottom: solid 2px $blue02;
-    
+    .p-works-page-ttl__cat{
+      margin: 0 auto 12px;
+      .c-works-item-cat{
+        @include  c-works-item-cat;
+        margin: 0 12px 0 0;
+      }
+    }
+  }
+}
+
+// 一覧にもどるボタン
+.p-works-page-ttl{
+  .c-link-btn{
+    font-family:$font-btn;
+    max-width: 240px;
+    margin:0 0 0 auto;
+    a {
+      border: solid 1px #ccc;
+      display: block;
+      padding:8px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      border-radius: 25px;
+      @include c-link-btn($background:#60A6D3,$font-color:#fff);
+      &:hover{
+        @include c-link-btn-hover($background:#fff,$font-color:#60A6D3);
+      }
+    }
   }
 }
 
@@ -276,6 +312,62 @@
   }
 }
 
+@include mq('sp') {
+// 基本情報
+.p-works-sgl-info{
+  display: block;
+  padding: 40px 2%;
+  .p-works-sgl-info__ttl{
+    display: inline-block;
+    padding-right: 40px;
+    margin-right: 0%;
+    margin-bottom: 10px;
+    &:last-of-type{
+      margin-bottom: 0;
+   } 
+    &::before{
+      display:inline-block;
+      content:'';
+      width: 30%;
+      height: 2px;
+      background: #dddddd;
+      position:absolute;
+      top: calc(50% - 2px);
+      right:0;
+    }
+  }
+  .p-works-sgl-info__txt{
+    flex-basis: 64%;
+    margin-bottom: 32px;
+    &:last-child{
+      margin-bottom: 0;
+   } 
+  }
+}
+}
+
+
+.p-works-page-btm{
+  .c-link-btn{
+    font-family:$font-btn;
+    max-width: 240px;
+    margin: 40px auto;
+    a {
+      border: solid 1px #ccc;
+      display: block;
+      padding: 1em;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      border-radius: 25px;
+      @include c-link-btn($background:#60A6D3,$font-color:#fff);
+      &:hover{
+        @include c-link-btn-hover($background:#fff,$font-color:#60A6D3);
+      }
+    }
+  }
+}
+
 // 前後ボタン
 .p-works-page-btm{
   &--flex{
@@ -285,10 +377,10 @@
   &__next,
   &__prev{
     a{
-      min-width: 300px;
+      min-width: 240px;
       width: 100%;
       display: block;
-      padding: 50px 20px 20px;
+      padding: 40px 16px 16px;
       border: solid 1px #bbbbbb;
       text-align: center;
       font-size: 14px;
@@ -297,12 +389,12 @@
       &::before{
         transition: 0.5s;
         display:inline-block;
-        font-size: 42px;
+        font-size: 38px;
         color:$blue03;
         font-family: $font-en03;
         position:absolute;
         top:0;
-        left:20%;
+        left:12%;
         transform: rotate(340deg);
       }
       &::after{
@@ -347,4 +439,62 @@
       }
     }
   }
+}
+
+@include mq('sp') {
+  // 前後ボタン
+.p-works-page-btm{
+  &__next,
+  &__prev{
+    a{
+      min-width:auto;
+      width: 100%;
+      display: block;
+      padding: 1.5em 2em;
+      &::before{
+        display: none;
+      }
+      &::after{
+        display:inline-block;
+        content:'';
+        width:20%;
+        height: 2px;
+        position:absolute;
+        top:50%;
+        background: #dcdcdc;
+        transition: 0.5s;
+      }
+      &:hover{
+        background:$blue03;
+        color: #ffffff;
+        &::before{
+          color:#ffffff;
+        }
+        &:after{
+          width: 25%;
+        }
+      }
+    }
+  }
+  &__next{
+    a{
+      &::before{
+        content:'next';
+      }
+      &::after{
+        right:-10%;
+      }
+    }
+  }
+  &__prev{
+    a{
+      &::before{
+        content:'prev';
+      }
+      &::after{
+        left:-10%;
+      }
+    }
+  }
+}
 }

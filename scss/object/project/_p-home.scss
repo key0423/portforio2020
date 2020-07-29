@@ -109,11 +109,10 @@
 }
 
 
-
 /*========== about ==========*/
 .p-home-about{
   display: flex;
-  @include padding-bottom2_3(80px);
+  @include padding-bottom2_3(140px);
   &__img{
     max-width:336px;
     margin-right:4%;
@@ -124,7 +123,7 @@
   }
   .c-link-btn{
     max-width: 240px;
-    margin: 0 auto;
+    margin: 0;
     a{
       border: solid 1px #ccc;
       &:hover{
@@ -135,7 +134,7 @@
 }
 .p-home-about-txt{
   &__txt{
-    @include margin-bottom2_3(42px);
+    @include margin-bottom2_3(60px);
   }
 }
 @include mq('sp') {
@@ -331,7 +330,7 @@
 
 /*==========catch==========*/
 .l-home-catch{
-  @include margin-bottom2_3(80px);
+  @include margin-bottom2_3(120px);
   .p-home-catch-bg{
     background: #EDEDED;
     .p-home-catch{
@@ -637,7 +636,7 @@
 @include mq('sp-s') {
 .p-home-contact{
   &__txt{
-    text-align: center;
+    text-align: left;
     margin:42px 1%;
     font-size: 14px;
     line-height: 1.8;

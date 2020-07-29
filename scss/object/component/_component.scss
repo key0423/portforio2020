@@ -4,7 +4,10 @@
   font-family:$font-btn;
   a{
     display: block;
-    padding:1em 2em;
+    padding: 1em;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
     @include c-link-btn($background:#fff,$font-color:#60A6D3);
     &:hover{
       @include c-link-btn-hover($background:#60A6D3,$font-color:#fff);
@@ -12,33 +15,158 @@
   }
 }
 
+
+/*=======================
+ページごとのタイトル
+=======================*/
+.c-page-ttl-bg{
+  padding: 80px 2%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  @include margin-bottom2_3(80px);
+  &::before{
+    display:inline-block;
+    content:'';
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(43, 108, 150, 0.7);
+  }
+}
+
+@include mq('sp') {
+  .c-page-ttl-bg{
+    padding: 60px 2%;
+  }
+}
+
+// 制作実績一覧頁
+.p-works-arc-ttl-bg{
+  background:url(../img/page_ttl/ttl_img_works.jpg);
+}
+// 制作実績一覧頁
+.p-contact-ttl-bg{
+  background:url(../img/about/about_img01.jpg);
+  background-size: cover;
+}
+
+
+
+
+.c-page-ttl {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  .c-page--heading {
+    display: inline-block;
+    color: #ffffff;
+    text-align: right;
+    .c-page-heading--en {
+        display: block;
+        font-size: 64px;
+        font-family: "Crimson Text", serif;
+        color: #fff;
+        letter-spacing: 0.2em;
+        line-height: 1.2;
+        position: relative;
+        &::before {
+          display: inline-block;
+          content: '';
+          background: #ffffff;
+          width: 800%;
+          height: 2px;
+          position: absolute;
+          left: calc(-700%);
+          bottom: 0;
+      }
+    }
+    .c-page-heading--ja {
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+  }
+}
+}
+@include mq('sp') {
+.c-page-ttl {
+  .c-page--heading {
+    .c-page-heading--en {
+      font-size: 52px;
+    }
+    .c-page-heading--ja {
+      font-size: 18px;
+  }
+}
+}
+}
+@include mq('sp-s') {
+.c-page-ttl {
+  .c-page--heading {
+    .c-page-heading--en {
+      font-size: 44px;
+    }
+    .c-page-heading--ja {
+      font-size: 16px;
+  }
+}
+}
+}
+
+/*=======================
+セクションごとのタイトル
+=======================*/
+.c-section-ttl{
+position: relative;
+line-height: 1.4;
+padding:0.25em 2em;
+display: inline-block;
+@include sec_ttl;
+.c-heading--en {
+  font-size: 40px;
+}
+.c-heading--ja {
+  font-size: 16px;
+} 
+}
+
+
 // タイトル
 .c-heading--en{
   display: block;
-  font-size:62px;
-  font-family:$font-en01;
+  font-size: 62px;
+  font-family: $font-en01;
   letter-spacing: 0.1em;
-  line-height:1.0;
+  line-height: 1.0;
   margin-bottom: 10px;
 }
 .c-heading--ja{
   display: block;
   font-size: 18px;
   letter-spacing: 0.1em;
-  line-height:1.6;
+  line-height: 1.6;
 }
 
 @include mq('sp') {
   .c-heading--en{
-    font-size:48px;
+    font-size: 48px;
   }
   .c-heading--ja{
     font-size: 16px;
   }
 }
 
-
 // font-weight
 .c--bold{
   font-weight: bold;
+}
+
+// カテゴリー
+.c-works-item-cat{
+  @include  c-works-item-cat ;
+  margin: 0 12px 0 0;
 }

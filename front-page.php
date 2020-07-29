@@ -22,7 +22,7 @@
   <div class="p-home-catch-bg">
     <div class="p-home-catch l-container-lg">
      <p class="p-home-copy__txt01">Web Design</p>
-     <p class="p-home-copy__txt02">Webサイトで出会いをつなぐ。<br>ターゲットや目的に合わせた制作を行い、<br>お客様の価値をあげるお手伝いをします。</p>
+     <p class="p-home-copy__txt02">Webサイトで出会いをつなぐ。<br>いい商品やいいサービス、世の中のステキな取り組みが<br>必要としてくれる人と出会うための制作を行いたい。</p>
     </div>
   </div>
 </div>
@@ -35,7 +35,7 @@
    </div>
    <div class="p-home-about__txt p-home-about-txt">
      <h2 class="p-home-heading --sp-none"><span class="c-heading--en">About</span><span class="c-heading--ja">私について</span></h2>
-    <p class="p-home-about-txt__txt">私大文系を卒業後、新卒で百貨店に就職。<br>24歳で職業訓練校に通いWebデザインを勉強、Webデザイナーへ転職しました。<br>お客様への共感と、チームメンバーとの連携を大切に制作を行っています。</p>
+    <p class="p-home-about-txt__txt">私立大学の文学部を卒業後、百貨店に就職。<br>24歳で職業訓練校に通いWebデザインを勉強、Webデザイナーへ転職しました。<br>お客様への共感と、チームメンバーとの連携を大切に制作を行っています。</p>
     <div class="c-link-btn">
       <a href="<?php echo home_url(); ?>/about/"><span class="c-link-btn__txt">More</span><span class="c-link-btn__arrow"></span></a>
      </div>
@@ -46,7 +46,7 @@
 <div class="l-home-works js-fadein">
   <section class="p-home-works">
     <div class="p-home-works--ttlbg p-home-works-ttlbg">
-      <div class="p-home-works-ttlbg__line js-slide-left"></div>
+      <div class="p-home-works-ttlbg__line"></div>
       <h2 class="p-home-heading l-container-lg"><span class="c-heading--en">Works</span><span class="c-heading--ja">サイトの目的を考え、<br>丁寧に制作。</span></h2>
     </div>
     <div class="l-container-lg">
@@ -56,7 +56,7 @@
 <?php 
 $args = array(
   'post_type' => 'works',
-  'posts_per_page' => 5, // 表示件数の指定
+  'posts_per_page' => 5, 
 );
 $the_query = new WP_Query($args);
 
@@ -126,7 +126,6 @@ $txt_area = get_field('arc_txt', $id);
    </div><!-- /.p-home-methods__right -->
   </div><!-- /.p-home-methods.l-flex-box -->
 </div>
-
 
 </main>
 
