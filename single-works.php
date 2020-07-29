@@ -54,7 +54,7 @@ $txt_area = get_field('txt_area');
   </div><!-- /.l-container-lg -->
   <div class="l-container-lg">
     <div class="c-link-btn">
-      <a href="<?php echo home_url(); ?>/"><span class="c-link-btn__txt">制作実績一覧へ</span><span class="c-link-btn__arrow"></span></a>
+      <a href="<?php echo home_url(); ?>/works/"><span class="c-link-btn__txt">制作実績一覧へ</span><span class="c-link-btn__arrow"></span></a>
     </div>
   </div>
 </div><!-- /.p-works-page-btm -->

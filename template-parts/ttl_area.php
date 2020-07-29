@@ -12,7 +12,7 @@
 <?php if(is_singular('works')){ ?>
 <div class="l-page-ttl p-works-page-ttl l-container-lg">
 <div class="c-link-btn">
-<a href="<?php echo home_url(); ?>/"><span class="c-link-btn__txt">制作実績一覧へ</span><span class="c-link-btn__arrow"></span></a>
+<a href="<?php echo home_url(); ?>/works/"><span class="c-link-btn__txt">制作実績一覧へ</span><span class="c-link-btn__arrow"></span></a>
 </div>
 
 <div class="p-works-page-ttl__cat">
