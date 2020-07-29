@@ -75,36 +75,7 @@ $(function(){
 
 });
 </script>
-<script>
-//PAGETOP
-$(function() {
-var flag = false;
-var pagetop = $('.pagetop');
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 700) {
-    if (flag == false) {
-      flag = true;
-      pagetop.stop().animate({
-        'bottom': '0'
-      }, 200);
-    }
-  } else {
-    if (flag) {
-      flag = false;
-      pagetop.stop().animate({
-        'bottom': '-180px'
-      }, 200);
-    }
-  }
-});
-pagetop.click(function () {
-  $('body, html').stop().animate({
-    scrollTop: 0
-  }, 800, 'easeInQuint');
-  return false;
-});
-});
-</script>
+
 
 
 <!-- =================== 画像フィット =======================-->

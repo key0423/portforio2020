@@ -2445,6 +2445,7 @@ contact
     display: block;
     background: url(../img/home/home_img03.jpg) no-repeat;
     background-size: cover;
+    padding: 0 0 60px;
     position: relative;
     overflow: hidden;
     z-index: 200;
@@ -2508,7 +2509,7 @@ contact
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 40px;
+    padding-top: 60px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -2546,6 +2547,9 @@ contact
 }
 
 @media screen and (max-width: 767px) {
+  .p-home-skill-list {
+    margin: 0 auto;
+  }
   .p-home-skill-list__item {
     padding: 20px 1%;
     align-items: center;
