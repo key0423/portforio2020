@@ -221,19 +221,19 @@
 .p-works-page-ttl{
   font-family:$mincho_ff;
   margin-bottom: 40px;
+  .p-works-page-ttl__cat{
+    margin: 0 auto 12px;
+    .c-works-item-cat{
+      @include  c-works-item-cat;
+      margin: 0 12px 0 0;
+    }
+  }
   .p-works-page-ttl__txt{    
     font-size: 28px;
     letter-spacing: 0.1em;
     line-height: 1.4;
     padding-bottom: 4px;
     border-bottom: solid 2px $blue02;
-    .p-works-page-ttl__cat{
-      margin: 0 auto 12px;
-      .c-works-item-cat{
-        @include  c-works-item-cat;
-        margin: 0 12px 0 0;
-      }
-    }
   }
 }
 
@@ -350,8 +350,8 @@
 .p-works-page-btm{
   .c-link-btn{
     font-family:$font-btn;
-    max-width: 240px;
-    margin: 40px auto;
+    max-width: 480px;
+    margin: 30px auto;
     a {
       border: solid 1px #ccc;
       display: block;

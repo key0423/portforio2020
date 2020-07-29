@@ -2909,25 +2909,25 @@ contact
   margin-bottom: 40px;
 }
 
-.p-works-page-ttl .p-works-page-ttl__txt {
-  font-size: 28px;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-  padding-bottom: 4px;
-  border-bottom: solid 2px #60A6D3;
-}
-
-.p-works-page-ttl .p-works-page-ttl__txt .p-works-page-ttl__cat {
+.p-works-page-ttl .p-works-page-ttl__cat {
   margin: 0 auto 12px;
 }
 
-.p-works-page-ttl .p-works-page-ttl__txt .p-works-page-ttl__cat .c-works-item-cat {
+.p-works-page-ttl .p-works-page-ttl__cat .c-works-item-cat {
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 游ゴシック体, 'Yu Gothic', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
   display: inline-block;
   background: #CFDEE8;
   font-size: 14px;
   padding: 4px 8px;
   margin: 0 12px 0 0;
+}
+
+.p-works-page-ttl .p-works-page-ttl__txt {
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  padding-bottom: 4px;
+  border-bottom: solid 2px #60A6D3;
 }
 
 .p-works-page-ttl .c-link-btn {
@@ -3094,8 +3094,8 @@ contact
 
 .p-works-page-btm .c-link-btn {
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", 游ゴシック体, "Yu Gothic", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
-  max-width: 240px;
-  margin: 40px auto;
+  max-width: 480px;
+  margin: 30px auto;
 }
 
 .p-works-page-btm .c-link-btn a {
