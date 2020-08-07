@@ -184,3 +184,14 @@ $(function(){
   
 });
 </script>
+
+<!-- =================== single works pop_up =======================-->
+<script>
+$('.js-pop-up-btn').on('click',function(){
+  $('.js-pop-up-wrap').addClass('show').fadeIn();
+});
+
+$('.js-close , .js-pop-up-wrap').on('click',function(){
+  $('.js-pop-up-wrap').fadeOut();
+});
+</script>

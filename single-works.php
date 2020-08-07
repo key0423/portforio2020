@@ -9,13 +9,28 @@ $position = get_field('position');
 $period = get_field('period');
 $position = get_field('position');
 $txt_area = get_field('txt_area');
+$screen_shot = get_field('screen_shot');
+$screen_img_url = $screen_shot['sizes']['large'];
 ?>
   <div class="p-works-sgl-top">
     <div class="p-works-sgl-main-img">
+
       <div class="p-works-sgl-main-img--maw l-container-lg">
         <img class="object_fit_img" src="<?php echo $img_size ?>" alt="<?php echo $img_alt ?>">
       </div>
     </div>
+
+    <!-- <div class="l-container-lg">
+      <button class="js-pop-up-btn c-pop-up"><i class="fas fa-search-plus"></i>画像を大きく見る</button>
+      <div class="js-pop-up-wrap">
+        <div class="js-pop-up-wrap__content">
+        <img src="<?php echo $screen_img_url; ?>" alt="スクリーンショット">
+        <button class="js-close c-pop-up"><i class="far fa-times-circle"></i>画像を閉じる
+        </button>
+        </div>
+      </div>
+    </div> -->
+
     <dl class="p-works-sgl-info l-container-lg">
     <dt class="p-works-sgl-info__ttl">URL</dt>
       <!-- <dd class="p-works-sgl-info__txt"><a href="<?php echo $url ?>" class="works-sgl-info__txt--link"><?php echo $url ?></a></dd> -->
@@ -34,7 +49,8 @@ $txt_area = get_field('txt_area');
   <div class="p-works-sgl-btm">
     <div class="p-works-sgl-comment l-container-lg">
       <div class="c-sec-editor">
-        <?php echo $txt_area ?></div>
+        <?php echo $txt_area ?>
+      </div>
     </div>
   </div>
 </main>

@@ -265,6 +265,7 @@
   padding: 60px 0;
   @include margin-bottom2_3(60px);
   .p-works-sgl-main-img--maw{
+    max-width: 880px;
     width: 100%;
     margin: 0 auto;
     img{
@@ -280,7 +281,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   @include margin-bottom2_3(60px);
-  background: #829CAD;
+  background: #74a4c3;
   padding: 40px 2%;
   color: #fff;
   .p-works-sgl-info__ttl{

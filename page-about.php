@@ -11,7 +11,7 @@
       </div>
       <div class="p-about-catch-middle">
         <h2 class="p-about-catch-middle__ttl">My Profile</h2>
-        <p class="p-about-catch-middle__img"><img src="<?php echo get_template_directory_uri(); ?>/img/about/about_img02.jpg" alt="Profile用の写真"></p>
+        <p class="p-about-catch-middle__img"><img src="<?php echo get_template_directory_uri(); ?>/img/about/about_img03.jpg" alt="Profile用の写真"></p>
         <div class="p-about-catch-middle__txt p-about-catch-middle-txt">
           <p class="p-about-catch-middle-txt__p">私立大学の文学部を卒業後、百貨店に勤務。<br>職業訓練校を経て都内制作会社で約2年、Webデザイナーとして勤務。WordPressを用いたコーポレートサイトの制作をメインに行ってきました。</p>
           <p class="p-about-catch-middle-txt__p">周囲からは「勉強好き」「建設的」と言われることが多く、自分が勉強した知識はシェアして、周囲の人と共に、より成長できたらいいと考えています。</p>

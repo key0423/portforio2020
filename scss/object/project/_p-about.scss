@@ -107,12 +107,12 @@ middle
   &__ttl{
     position: absolute;
     font-family: $font-en03;
-    color: #ffffff;
+    color: #f1ff28;
     top: 40px;
-    left: 47%;
+    left: 45%;
     z-index: 100;
     font-size: 72px;
-    text-shadow:2px 2px 6px $blue02;
+    text-shadow:2px 2px 3px #666666;
     transform: rotate(340deg);
   }
   &__img{
@@ -289,10 +289,11 @@ history
 
 
 .p-about-round{
-  border: solid 1px #333;
   border-radius: 50%;
   position: relative;
-  background: #fff;
+  background: #60A6D3;
+  color: #ffffff;
+  box-shadow: 2px 2px 4px #bbbbbb;
   width: 120px;
   height: 120px;
   &--inner{
